@@ -34,10 +34,17 @@ $('.navbar-collapse ul li a').click(function() {
 
 // Google Maps Scripts
 var map = null;
+//var mapCenter = new google.maps.LatLng(56.816665, 14.833333)
+var mapCenter = new google.maps.LatLng(56.8113344, 14.8319706)
+//maps/place/Farmen+Rent+%26+Event+i+V%C3%A4xj%C3%B6+AB/@56.8113344,14.8319706,15.75z/data=!4m12!1m6!3m5!1s0x0:0x8ce198a58a6eb3b7!2sFarmen+Rent+%26+Event+i+V%C3%A4xj%C3%B6+AB!8m2!3d56.8116487!4d14.8349648!3m4!1s0x0:0x8ce198a58a6eb3b7!8m2!3d56.8116487!4d14.8349648?hl=sv
+var mapRinkaby = new google.maps.LatLng(56.8113344, 14.8319706)
+///maps/place/Tävelsås+kyrka,+Svenska+kyrkan+Växjö/@56.7672869,14.8170383,15z/data=!4m5!3m4!1s0x0:0x6a8aa556a0176517!8m2!3d56.7758266!4d14.8266989?hl=sv
+var mapKyrka = new google.maps.LatLng(56.7672869, 14.8170383)
+
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+    map.setCenter(mapCenter);
 });
 
 function init() {
@@ -45,17 +52,17 @@ function init() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 15,
+        zoom: 11,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: mapCenter, // New York
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
-        scrollwheel: false,
-        draggable: false,
+        scrollwheel: true,
+        draggable: true,
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "water",
@@ -166,8 +173,30 @@ function init() {
             }]
         }]
     };
+    var mapChurchElement = document.getElementById('map-church');
 
-    // Get the HTML DOM element that will contain your map 
+    // Create the Google Map using out element and options defined above
+    var mapChurchOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 11,
+
+        // The latitude and longitude to center the map (always required)
+        center: mapKyrka,
+
+        // Disables the default Google Maps UI components
+        disableDefaultUI: true,
+        scrollwheel: true,
+        draggable: true,
+    }
+    var mapKyrka = new google.maps.Map(mapChurchElement, mapChurchOptions);
+
+    var kyrkaMarker = new google.maps.Marker({
+        position: mapKyrka,
+        map: mapKyrka,
+        icon: image
+    });
+
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
 
@@ -176,10 +205,11 @@ function init() {
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
-    var beachMarker = new google.maps.Marker({
-        position: myLatLng,
+    var rinkabyMarker = new google.maps.Marker({
+        position: mapRinkaby,
         map: map,
         icon: image
     });
+
+
 }

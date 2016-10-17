@@ -1,3 +1,33 @@
 [1015/151823:ERROR:crash_report_database_win.cc(412)] unexpected header
 [1015/151854:ERROR:crash_report_database_win.cc(412)] unexpected header
 [1015/152237:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/093230:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/093956:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/195219:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/200219:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/200219:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/200221:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/200719:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/202219:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/202359:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/203719:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/205219:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/205430:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/210023:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/210719:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/211308:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/212219:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/213719:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/214532:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/215219:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/220719:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1016/221608:ERROR:process_reader_win.cc(142)] SuspendThread: Åtkomst nekad. (0x5)
+[1016/221608:ERROR:process_reader_win.cc(142)] SuspendThread: Åtkomst nekad. (0x5)
+[1016/221608:ERROR:process_reader_win.cc(142)] SuspendThread: Åtkomst nekad. (0x5)
+[1016/221608:ERROR:process_reader_win.cc(142)] SuspendThread: Åtkomst nekad. (0x5)
+[1016/221608:ERROR:process_reader_win.cc(142)] SuspendThread: Åtkomst nekad. (0x5)
+[1016/221608:ERROR:exception_snapshot_win.cc(87)] thread ID 2764 not found in process
+[1016/221608:WARNING:crash_report_exception_handler.cc(56)] ProcessSnapshotWin::Initialize failed
+[1016/221609:ERROR:process_reader_win.cc(233)] ReadMemory at 0x14f5000 of 45056 bytes failed: Endast delar av en ReadProcessMemory- eller WriteProcessMemory-begäran har slutförts. (0x12B)
+[1016/221609:ERROR:crash_report_exception_handler.cc(98)] WriteEverything failed
+[1016/221609:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Ett försök gjordes att använda en befintlig process.  (0xc000010a)
