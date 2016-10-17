@@ -7,10 +7,9 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Kaushan Script',"Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #204020;
-  background: url(../img/murgrona.png) center left scroll #fbfbfb;
-  background-repeat-x: no-repeat; }
+  background: url(../img/confectionary.png) #fbfbfb; }
 
 html {
   width: 100%;
@@ -35,23 +34,22 @@ h6 {
 
 p {
   margin: 0 0 25px;
-  font-size: 14px;
-  line-height: 1.1;
-  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif; }
+  font-size: 16px;
+  line-height: 1.1; }
   @media (min-width: 768px) {
     p {
       margin: 0 0 35px;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.3; } }
 
 a {
-  color: #408c28;
+  color: #204020;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
   a:hover, a:focus {
     text-decoration: none;
-    color: #1c3d11; }
+    color: black; }
 
 .light {
   font-weight: 400; }
@@ -139,17 +137,17 @@ a {
   height: 70px;
   margin-top: 15px;
   padding: 7px 16px;
-  border: 2px solid #408c28;
+  border: 2px solid #204020;
   border-radius: 100% !important;
   font-size: 40px;
-  color: #408c28;
+  color: #204020;
   background: transparent;
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out; }
   .btn-circle:hover, .btn-circle:focus {
     outline: none;
-    color: #408c28;
+    color: #204020;
     background: rgba(255, 255, 255, 0.1); }
   .btn-circle i.animated {
     -webkit-transition-property: -webkit-transform;
@@ -191,22 +189,40 @@ a {
 .content-section {
   padding-top: 100px; }
 
+.container .panel-rounded {
+  border: 5px solid #204020;
+  box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 5px #204020;
+  border-radius: 20px; }
+  .container .panel-rounded > .panel-heading {
+    color: #204020;
+    background-color: rgba(32, 64, 32, 0.2);
+    border-bottom: 1px solid #204020; }
+
 .panel-block-bg {
   background-color: rgba(0, 0, 0, 0.43);
-  background-blend-mode: hard-light;
   padding: 15px; }
 
-.rinkaby-section {
+.image-bg-section {
   width: 100%;
   padding: 50px 0;
   margin-top: 100px;
   color: white;
-  background: url(../img/rinkaby_tables.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover; }
+  background-size: cover; }
+
+#church {
+  background: url(../img/kyrka.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+#festen {
+  background: url(../img/rinkaby_tables.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
 
 #rsvp p.help-block {
   font-size: 0.9em; }
@@ -223,9 +239,9 @@ a {
 @media (min-width: 767px) {
   .content-section {
     padding-top: 250px; }
-  .rinkaby-section {
-    margin-top: 250px;
-    padding: 100px 0; }
+    .content-section.image-bg-section {
+      margin-top: 250px;
+      padding: 100px 0; }
   #map {
     height: 400px;
     margin-top: 250px; } }
@@ -240,14 +256,14 @@ a {
   border-radius: 0; }
 
 .btn-default {
-  border: 1px solid #408c28;
-  color: #408c28;
+  border: 1px solid #204020;
+  color: #204020;
   background-color: transparent; }
   .btn-default:hover, .btn-default:focus {
-    border: 1px solid #408c28;
+    border: 1px solid #204020;
     outline: none;
-    color: black;
-    background-color: #408c28; }
+    color: white;
+    background-color: #204020; }
 
 ul.banner-social-buttons {
   margin-top: 0; }

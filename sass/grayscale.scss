@@ -4,10 +4,9 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Kaushan Script',"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: $text;
-    background: url(../img/murgrona.png) center left scroll $bgcolor;
-    background-repeat-x: no-repeat;
+    background: url(../img/confectionary.png) $bgcolor;
 }
 
 html {
@@ -36,12 +35,11 @@ h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.1;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     @media(min-width:768px) {
         margin: 0 0 35px;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.3;
     }
 }
@@ -244,24 +242,49 @@ a {
 .content-section {
     padding-top: 100px;
 }
+
+.container {
+  .panel-rounded {
+    border:5px solid $panelColor;
+    box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 5px $panelColor, ;
+    border-radius: 20px;
+    >.panel-heading {
+      color: $text;
+      background-color: rgba($panelColor, 0.2);
+      border-bottom:1px solid $panelColor;
+    }
+  }
+}
+
 .panel-block-bg {
   background-color: rgba(0, 0, 0, 0.43);
-  background-blend-mode: hard-light;
   padding: 15px;
 }
-.rinkaby-section {
+
+.image-bg-section {
     width: 100%;
     padding: 50px 0;
     margin-top: 100px;
     color: white;
-    background: url(../img/rinkaby_tables.jpg) no-repeat center center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
 }
+#church {
+  background: url(../img/kyrka.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 
+}
+#festen {
+  background: url(../img/rinkaby_tables.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+
+}
 #rsvp {
   p.help-block {
     font-size: 0.9em;
@@ -280,11 +303,10 @@ a {
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
-    }
-
-    .rinkaby-section {
-        margin-top: 250px;
-        padding: 100px 0;
+        &.image-bg-section {
+          margin-top: 250px;
+          padding: 100px 0;
+        }
     }
 
     #map {
@@ -311,7 +333,7 @@ a {
     &:focus {
         border: 1px solid $primary;
         outline: none;
-        color: black;
+        color: white;
         background-color: $primary;
     }
 }
