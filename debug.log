@@ -31,3 +31,12 @@
 [1016/221609:ERROR:process_reader_win.cc(233)] ReadMemory at 0x14f5000 of 45056 bytes failed: Endast delar av en ReadProcessMemory- eller WriteProcessMemory-begäran har slutförts. (0x12B)
 [1016/221609:ERROR:crash_report_exception_handler.cc(98)] WriteEverything failed
 [1016/221609:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Ett försök gjordes att använda en befintlig process.  (0xc000010a)
+[1018/174347:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/194829:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/194829:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/195329:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/200829:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/202329:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/203829:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/205329:ERROR:crash_report_database_win.cc(412)] unexpected header
+[1018/210829:ERROR:crash_report_database_win.cc(412)] unexpected header
