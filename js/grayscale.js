@@ -47,58 +47,42 @@ function initMap() {
   ///maps/place/Tävelsås+Church,+Svenska+Churchn+Växjö/@56.7672869,14.8170383,15z/data=!4m5!3m4!1s0x0:0x6a8aa556a0176517!8m2!3d56.7758266!4d14.8266989?hl=sv
   var mapChurchCenter = new google.maps.LatLng(56.7672869, 14.8170383)
 
-  var mapChurch = new google.maps.Map(document.getElementById('map-church'), {
-    zoom: 10,
-    center: mapCenter,
-    disableDefaultUI: true,
-    scrollwheel: false,
-    draggable: false,
-    styles: mapStyle
-  });
-
-  var ChurchMarker = new google.maps.Marker({
-    position: mapChurchCenter,
-    map: mapChurch,
-    icon: imageChurch,
-
-  });
-
-  // Create the Google Map using out element and options defined above
-  var mapRinkaby = new google.maps.Map(document.getElementById('map-rinkaby'), {
-    zoom: 12,
-    center: mapCenter,
-    disableDefaultUI: true,
-    scrollwheel: false,
-    draggable: false,
-    styles: mapStyle
-  });
-
-  var rinkabyMarker = new google.maps.Marker({
-    position: mapRinkabyCenter,
-    map: mapRinkaby,
-    icon: imageCake
-  });
-
   // Create the Google Map using out element and options defined above
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
     center: mapCenter,
     disableDefaultUI: true,
-    scrollwheel: false,
-    draggable: false,
+    scrollwheel: true,
+    draggable: true,
     styles: mapStyle
   });
 
   new google.maps.Marker({
     position: mapRinkabyCenter,
     map: map,
+    label: "Rinkabygård",
     icon: imageCake
   });
   new google.maps.Marker({
     position: mapChurchCenter,
     map: map,
+    label: "Kyrkan",
     icon: imageChurch
   });
+  var infoWindow = new google.maps.InfoWindow({map: map});
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Du befinner dig här!');
+    });
+  }
   // Re-center the wider map on window resize
   google.maps.event.addDomListener(window, 'resize', function() {
     map.setCenter(mapCenter);

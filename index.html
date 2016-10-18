@@ -41,7 +41,7 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> 17-05-20
+                    <i class="fa fa-play-circle"></i> <span class="light">Stefan &amp; Ida</span> 17-05-20
                 </a>
             </div>
 
@@ -59,7 +59,7 @@
                         <a class="page-scroll" href="#rsvp">RSVP</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#chruch">Kyrkan</a>
+                        <a class="page-scroll" href="#church">Vigsel</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#party">Festen</a>
@@ -95,31 +95,82 @@
     </header>
 
     <!-- About Section -->
-    <section id="intro" class="container content-section ">
-        <div class="row">
-            <div class="col-lg-6 col-lg-offset-1">
-                <h2>Om Bröllopet</h2>
-                <p>Efter många år som förlovade, flera barn och mycket roligt så bestämde vi oss för ett datum för giftermålet!</p>
-                <p>När vi väl hittade stället vi ville ha festeten på så föll alla bitarna på plats. Mer information hittar du längre ner på sidan.</p>
-                <p>Vi ser verkligen fram mot denna tillställning och hoppas att vi kommer ha en fantastisk dag tillsammans!</p>
-            </div>
+    <section id="intro" class="content-section">
+      <div class="container">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="paper-box">
+            <h2>Om Bröllopet</h2>
+            <p>Efter många år som förlovade, flera barn och mycket roligt så bestämde vi oss för ett datum för giftermålet!</p>
+            <p>När vi väl hittade stället vi ville ha festeten på så föll alla bitarna på plats. Mer information hittar du längre ner på sidan.</p>
+            <p>Vi ser verkligen fram mot denna tillställning och hoppas att vi kommer ha en fantastisk dag tillsammans!</p>
+          </div>
         </div>
-
+      </div>
     </section>
-    <!-- Kyrkan -->
-    <section id="church" class="content-section image-bg-section">
-      <div class="row">
-        <div class="col-lg-3 col-lg-offset-3">
-          <h2>Vigselceremoni</h2>
-          <p>För att göra det smidigt för alla så valde vi en kyrka nära Växjö och nära till festlokalen.</p>
-          <p>Vigseln startar klockan 16:00</p>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="content-section">
+      <div class="container">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="paper-box">
+            <h3>RSVP</h3>
+            <p>För att vi skall kunna få till allt det praktiska så behöver vi veta om du/ni kommer.</p>
+            <p>Fyll i nedanstånde formulär och berätta om ni kan komma eller inte, vi behöver få in svar innan <strong>2017-02-01</strong>.</p>
+            <form>
+              <div class="form-group">
+                <label for="name">Namn</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Förnamn Efternamn">
+              </div>
+              <div class="form-group">
+                <label for="inputEmail1">E-post adress</label>
+                <input type="text" class="form-control" id="inputEmail1" name="email" placeholder="namn@domain.com">
+              </div>
+              <div class="form-group">
+                <label for="inputPhone1">Telefon</label>
+                <input type="text" class="form-control" id="inputPhone1" name="phone" placeholder="070-123123">
+              </div>
+              <div class="form-group">
+                <label for="comment">Kommentar</label>
+                <textarea id="comment" class="form-control" name="comment"></textarea>
+                <p class="help-block">T.ex. Allergier eller annat övrigt som kan vara bra för oss att veta.</p>
+              </div>
+              <div class="form-group">
+              <div class="radio">
+                  <label>
+                    <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
+                    Jag kommer
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
+                    Jag kan inte komma
+                  </label>
+                </div>
+                <div class="radio disabled">
+                  <label>
+                    <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
+                    Jag vill inte komma
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-default btn-lg">Skicka</button>
+            </form>
+          </div>
         </div>
-        <div class="col-lg-3">
-            <h2>Festen</h2>
-            <p>Det var inte fören vi hittade Rinkabygård som vi verkligen bestämde oss för att sätta ett datum för vigseln.</p>
-            <p>Lokalen har allt som vi tyckte var viktigt för att få till en riktigt bra bröllopsfest.</p>
-            <p>vårt fokus har varit att det skall bli så roligt som möjligt för alla inblandade och inte så mycket fokus på seder och tradition.</p>
-            <p>Vi vill därför att du gör ditt yttersta för att verkligen det så trevligt som möjligt!</p>
+      </div>
+    </section>
+
+    <!-- Kyrkan -->
+    <section id="church" class="content-section">
+      <div class="container">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="paper-box">
+            <h2>Vigselceremoni</h2>
+            <p>För att göra det smidigt för alla så valde vi en kyrka nära Växjö och nära till festlokalen.</p>
+            <p>Vigseln startar klockan 16:00</p>
+            <p>Vägbeskrivning till <a href="#map" data-target-marker="rinkaby">Kyrkan</a> finns nedan.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -133,75 +184,16 @@
                 <p>Lokalen har allt som vi tyckte var viktigt för att få till en riktigt bra bröllopsfest.</p>
                 <p>vårt fokus har varit att det skall bli så roligt som möjligt för alla inblandade och inte så mycket fokus på seder och tradition.</p>
                 <p>Vi vill därför att du gör ditt yttersta för att verkligen det så trevligt som möjligt!</p>
-                <h4>Rinkabygård hittar ni här</h4>
-                <div id="map-rinkaby"></div>
+                <p>Rinkabygård hittar ni <a href="#map" data-target-marker="rinkaby">här</a></p>
             </div>
         </div>
     </section>
-    <!-- RSVP Section -->
-    <section id="rsvp" class="content-section">
-      <div class="container">
-        <div class="col-lg-6 col-lg-offset-3">
-          <div class="panel panel-rounded">
-            <div class="panel-heading">
-              <h3 class="panel-title">RSVP</h3>
-            </div>
-            <div class="panel-body">
-              <p>För att vi skall kunna få till allt det praktiska så behöver vi veta om du/ni kommer.</p>
-              <p>Fyll i nedanstånde formulär och berätta om ni kan komma eller inte, vi behöver få in svar innan <strong>2017-02-01</strong>.</p>
-              <form  class="col-lg-8">
-                <div class="form-group">
-                  <label for="name">Namn</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Förnamn Efternamn">
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail1">E-post adress</label>
-                  <input type="text" class="form-control" id="inputEmail1" name="email" placeholder="namn@domain.com">
-                </div>
-                <div class="form-group">
-                  <label for="inputPhone1">Telefon</label>
-                  <input type="text" class="form-control" id="inputPhone1" name="phone" placeholder="070-123123">
-                </div>
-                <div class="form-group">
-                  <label for="comment">Kommentar</label>
-                  <textarea id="comment" class="form-control" name="comment"></textarea>
-                  <p class="help-block">T.ex. Allergier eller annat övrigt som kan vara bra för oss att veta.</p>
-                </div>
-                <div class="form-group">
-                <div class="radio">
-                    <label>
-                      <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
-                      Jag kommer
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
-                      Jag kan inte komma
-                    </label>
-                  </div>
-                  <div class="radio disabled">
-                    <label>
-                      <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
-                      Jag vill inte komma
-                    </label>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-default btn-lg">Skicka</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-
-
-    <!-- RSVP Section -->
+    <!-- Schema Section -->
     <section id="schema" class="content-section">
       <div class="container">
         <div class="col-lg-6 col-lg-offset-3">
-          <div class="panel panel-rounded">
+          <div class="paper-box">
             <div class="panel-heading">
               <h3 class="panel-title">Hålltider</h3>
             </div>
