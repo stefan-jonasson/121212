@@ -65,7 +65,7 @@ a {
     border-bottom: 1px solid rgba(white, 0.3);
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #bbbfbb;
+    background-color: $bgcolor;
     .navbar-toggle {
         padding: 4px 6px;
         font-size: 16px;
@@ -114,10 +114,18 @@ a {
         border-bottom: none;
         letter-spacing: 1px;
         background: transparent;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        a {
+          color:white;
+          text-shadow: 0 0 3px black;
+        }
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
         &.top-nav-collapse {
+            a {
+              color: $text;
+              text-shadow:none;
+            }
             padding: 0;
             background: $bgcolor;
             border-bottom: 1px solid rgba(white, 0.3);
@@ -132,6 +140,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: white;
+    text-shadow: 0 0 10px black;
     background: url(../img/intro_bg.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -139,29 +148,19 @@ a {
     .intro-body {
         display: table-cell;
         vertical-align: middle;
+        font-size: 60px;
         .brand-heading {
-            font-size: 40px;
-        }
-        h2.brand-heading {
-            font-size: 30px;
+            font-size: 1em;
         }
         .intro-text {
-            font-size: 18px;
+            font-size: .6em;
         }
     }
     @media(min-width:768px) {
         height: 100%;
         padding: 0;
         .intro-body {
-            .brand-heading {
-                font-size: 120px;
-            }
-            h2.brand-heading {
-                font-size: 60px;
-            }
-            .intro-text {
-                font-size: 26px;
-            }
+          font-size: 120px;
         }
     }
 }
@@ -171,10 +170,12 @@ a {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid $primary;
+    border: 2px solid white;
+    box-shadow: 0 0 10px black;
     border-radius: 100% !important;
     font-size: 40px;
-    color: $primary;
+    color:white;
+    text-shadow: 0 0 10px black;
     background: transparent;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
