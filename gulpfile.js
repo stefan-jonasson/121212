@@ -5,22 +5,13 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-var pkg = require('./package.json');
+var autoprefixer = require('gulp-autoprefixer');
 
-// Set the banner content
-var banner = ['/*!\n',
-    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
-    ' */\n',
-    ''
-].join('');
 
 // Compile SASS files from /less into /css
 gulp.task('sass', function() {
     return gulp.src('sass/grayscale.scss')
-        .pipe(sass())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -30,6 +21,10 @@ gulp.task('sass', function() {
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
     return gulp.src('css/grayscale.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
@@ -42,7 +37,6 @@ gulp.task('minify-css', ['sass'], function() {
 gulp.task('minify-js', function() {
     return gulp.src('js/grayscale.js')
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js'))
         .pipe(browserSync.reload({

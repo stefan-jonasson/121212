@@ -27,6 +27,26 @@ $(function() {
     });
 });
 
+// jQuery updating phto-card classes when scrolled into view
+$(function() {
+  var scrollChecker = function() {
+    var markers = $('.view-marker');
+    if (markers.length == 0) {
+      $(document).off('scroll.scrollchecker');
+    } else {
+      markers.each(function () {
+        if ($(this).offset().top < (window.screen.availHeight / 2)) {
+          $(this).removeClass('view-marker').addClass('in-view');
+          console.log($(this).offset().top, 'scrolltop');
+          console.log(window.screen.availHeight / 2, 'availHeight');
+        }
+      });
+    }
+  };
+  $(document).on('scroll.scrollchecker', scrollChecker);
+  scrollChecker();
+});
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $(this).closest('.collapse').collapse('toggle');

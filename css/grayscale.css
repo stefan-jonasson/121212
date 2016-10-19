@@ -151,27 +151,19 @@ a {
   color: white;
   text-shadow: 0 0 10px black;
   background: transparent;
-  -webkit-transition: background .3s ease-in-out;
-  -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out; }
   .btn-circle:hover, .btn-circle:focus {
     outline: none;
     color: white;
     background: rgba(0, 0, 0, 0.1); }
   .btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s; }
+    transition-property: -webkit-transform;
+    transition-duration: 1s; }
   .btn-circle:hover i.animated {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear; }
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
 
 @-webkit-keyframes pulse {
   from {
@@ -192,13 +184,13 @@ a {
 .content-section {
   padding-top: 100px; }
 
-.container .paper-box {
+.paper-box {
   background-color: white;
   padding: 40px;
   position: relative;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 30px rgba(0, 0, 0, 0.08); }
 
-.container .paper-box:before, .container .paper-box:after {
+.paper-box:before, .paper-box:after {
   position: absolute;
   width: 40%;
   height: 10px;
@@ -210,7 +202,7 @@ a {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   z-index: -1; }
 
-.container .paper-box:after {
+.paper-box:after {
   left: auto;
   right: 12px;
   transform: skew(5deg) rotate(5deg); }
@@ -233,25 +225,38 @@ a {
   position: absolute;
   border: 3px solid white;
   box-shadow: 0 0 0 1px black;
-  z-index: -1; }
+  z-index: -1;
+  top: 0;
+  transition: transform .8s ease-out, top transform .8s ease-out, left transform .8s ease-out, right transform .8s ease-out; }
 
 #alice-fiona {
   background: url(../img/alice-fiona-small.jpg) no-repeat center center;
-  transform: rotate(-25deg);
   width: 400px;
-  height: 271px;
-  top: 200px;
-  left: -300px; }
+  height: 271px; }
+  #alice-fiona.in-view {
+    transform: rotate(-25deg);
+    left: -500px;
+    top: -100px; }
 
 #fiona {
   background: url(../img/fiona-small.jpg) no-repeat center center;
-  transform: rotate(50deg);
   width: 300px;
-  height: 400px;
-  top: 242px;
-  right: -35px; }
+  height: 400px; }
+  #fiona.in-view {
+    transform: rotate(50deg);
+    left: -500px;
+    top: -100px; }
 
-#party {
+#this-way-to {
+  background: url(../img/thiswayto.jpg) no-repeat center center;
+  width: 450px;
+  height: 450px; }
+  #this-way-to.in-view {
+    transform: rotate(25deg);
+    left: -500px;
+    top: -100px; }
+
+#party-image {
   background: url(../img/rinkaby_tables.jpg) no-repeat center center;
   background-size: cover; }
 
@@ -260,18 +265,14 @@ a {
 
 #map {
   width: 100%;
-  height: 200px;
-  margin-top: 100px; }
+  height: 400px; }
 
 @media (min-width: 767px) {
   .content-section {
     padding-top: 250px; }
     .content-section.image-bg-section {
       margin-top: 250px;
-      padding: 100px 0; }
-  #map {
-    height: 400px;
-    margin-top: 250px; } }
+      padding: 100px 0; } }
 
 .btn {
   text-transform: uppercase;

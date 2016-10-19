@@ -5,9 +5,9 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="autdor" content="">
+    <meta name="author" content="">
 
     <title>Stefan &amp; Ida</title>
 
@@ -96,14 +96,14 @@
     <section id="about" class="content-section">
       <div class="container">
         <div class="col-md-6 col-md-offset-3">
-          <div id="alice-fiona" class="photo-card"></div>
-          <div id="fiona" class="photo-card"></div>
           <div class="paper-box">
             <h3>Om Bröllopet</h3>
             <p>Efter många år som förlovade, flera barn och mycket roligt så bestämde vi oss för ett datum för giftermålet!</p>
             <p>När vi väl hittade stället vi ville ha festeten på så föll alla bitarna på plats. Mer information hittar du längre ner på sidan.</p>
             <p>Vi ser verkligen fram mot denna tillställning och hoppas att vi kommer ha en fantastisk dag tillsammans!</p>
           </div>
+          <div id="alice-fiona" class="photo-card view-marker"></div>
+          <div id="fiona" class="photo-card view-marker"></div>
         </div>
       </div>
     </section>
@@ -176,9 +176,10 @@
     </section>
 
     <!-- Festen Section -->
-    <section id="party" class="content-section image-bg-section">
+    <section id="party" class="content-section">
         <div class="container">
-            <div class="panel-block-bg col-md-6 col-md-offset-3">
+            <div class="col-md-6 col-md-offset-6">
+              <div class="paper-box">
                 <h2>Festen</h2>
                 <p>Det var inte fören vi hittade Rinkabygård som vi verkligen bestämde oss för att sätta ett datum för vigseln.</p>
                 <p>Lokalen har allt som vi tyckte var viktigt för att få till en riktigt bra bröllopsfest.</p>
@@ -187,12 +188,13 @@
                 <p>Rinkabygård hittar ni <a href="#map" data-target-marker="rinkaby">här</a></p>
             </div>
         </div>
+      <div>
     </section>
 
     <!-- Schema Section -->
     <section id="schema" class="content-section">
       <div class="container">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 col-md-offset-1">
           <div class="paper-box">
             <div class="panel-heading">
               <h3 class="panel-title">Hålltider</h3>
@@ -242,6 +244,22 @@
       </div>
     </section>
 
+
+    <!-- Map Section -->
+    <section id="map-section" class="content-section">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-4">
+              <div class="paper-box">
+                <h2>Vägbeskrivning</h2>
+                <p>Kartan visar vägen till kyrkan och Rinkabygård</p>
+                <div id="map"></div>
+            </div>
+            <div id="this-way-to" class="photo-card view-marker"></div>
+        </div>
+      <div>
+    </section>
+
+
     <!-- Contact Section -->
     <section id="other" class="container content-section text-center">
         <div class="row">
@@ -272,8 +290,6 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
 
     <!-- Footer -->
     <footer>
