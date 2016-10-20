@@ -57,7 +57,7 @@ a {
   .navbar-custom .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: white; }
+    color: #333; }
     .navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
       outline: none; }
   .navbar-custom .navbar-brand {
@@ -104,7 +104,7 @@ a {
 .intro {
   display: table;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 100px 0;
   text-align: center;
   color: white;
@@ -116,11 +116,17 @@ a {
   .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
-    font-size: 60px; }
+    font-size: 40px; }
     .intro .intro-body .brand-heading {
       font-size: 1em; }
     .intro .intro-body .intro-text {
       font-size: .6em; }
+  @media (min-width: 768px) {
+    .intro {
+      height: 100%;
+      padding: 0; }
+      .intro .intro-body {
+        font-size: 100px; } }
   @media (min-width: 768px) {
     .intro {
       height: 100%;
@@ -218,45 +224,71 @@ a {
 
 .photo-card {
   position: absolute;
-  border: 3px solid white;
-  box-shadow: 0 0 0 1px black;
-  z-index: -1;
   top: 0;
-  transition: transform .8s ease-out, top transform .8s ease-out;
-  /*
-              left transform .8s ease-out,
-              right transform .8s ease-out*/ }
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px black, inset 0 0 10px rgba(0, 0, 0, 0.08);
+  z-index: -1;
+  transform: rotate3d(0, 1, 1, 90deg);
+  transform-origin: center;
+  transition: transform 1.3s ease-out;
+  visibility: hidden; }
+  @media (max-width: 768px) {
+    .photo-card {
+      display: none; } }
+  .photo-card.in-view {
+    visibility: visible; }
 
 #alice-fiona {
   background: url(../img/alice-fiona-small.jpg) no-repeat center center;
   width: 400px;
   height: 271px; }
   #alice-fiona.in-view {
-    transform: rotate(-25deg);
-    left: -500px;
-    top: -100px; }
+    transform: rotate(-25deg) translate(-290px, -160px); }
 
 #fiona {
   background: url(../img/fiona-small.jpg) no-repeat center center;
   width: 300px;
   height: 400px; }
   #fiona.in-view {
-    transform: rotate(50deg);
-    left: -500px;
-    top: -100px; }
+    transform: rotate(20deg) translate(450px, 100px); }
+
+#no-post {
+  background: url(../img/no-post.jpg) no-repeat center center;
+  width: 279px;
+  height: 400px; }
+  #no-post.in-view {
+    transform: rotate(20deg) translate(620px, 100px); }
 
 #this-way-to {
   background: url(../img/thiswayto.jpg) no-repeat center center;
   width: 450px;
   height: 450px; }
   #this-way-to.in-view {
-    transform: rotate(25deg);
-    left: -500px;
-    top: -100px; }
+    transform: rotate(25deg) translate(-390px, 200px); }
 
-#party-image {
+#kyrka {
+  background: url(../img/kyrka.jpg) no-repeat center center;
+  width: 300px;
+  height: 451px;
+  transform: rotate3d(1, 1, 1, 180deg); }
+  #kyrka.in-view {
+    transform: rotate(25deg) translate(540px, -100px); }
+
+#rinkaby-tables {
   background: url(../img/rinkaby_tables.jpg) no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  width: 400px;
+  height: 300px; }
+  #rinkaby-tables.in-view {
+    transform: rotate(25deg) translate(-440px, 100px); }
+
+#rinkaby-spring {
+  background: url(../img/rinkaby-spring.jpg) no-repeat center center;
+  background-size: cover;
+  width: 400px;
+  height: 300px; }
+  #rinkaby-spring.in-view {
+    transform: rotate(40deg) translate(140px, 550px); }
 
 #rsvp p.help-block {
   font-size: 0.9em; }

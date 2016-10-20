@@ -37,12 +37,10 @@ $(function() {
       markers.each(function () {
         var scrollTop = (window.screen.availHeight * 0.9 ) + $(document).scrollTop();
         if ($(this).offset().top < scrollTop) {
-          $(this).removeClass('view-marker').addClass('in-view');
-          console.log($(this).offset().top, 'scrolltop');
-          console.log(scrollTop, 'availHeight');
-        } else {
-          console.log($(this).offset().top, 'scrolltop');
-          console.log(scrollTop, 'availHeight');
+          $(this).removeClass('view-marker');
+          setTimeout(function () {
+            $(this).addClass('in-view');
+          }.bind(this), 2600);
         }
       });
     }
