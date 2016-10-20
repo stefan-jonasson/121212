@@ -35,10 +35,14 @@ $(function() {
       $(document).off('scroll.scrollchecker');
     } else {
       markers.each(function () {
-        if ($(this).offset().top < (window.screen.availHeight / 2)) {
+        var scrollTop = (window.screen.availHeight * 0.9 ) + $(document).scrollTop();
+        if ($(this).offset().top < scrollTop) {
           $(this).removeClass('view-marker').addClass('in-view');
           console.log($(this).offset().top, 'scrolltop');
-          console.log(window.screen.availHeight / 2, 'availHeight');
+          console.log(scrollTop, 'availHeight');
+        } else {
+          console.log($(this).offset().top, 'scrolltop');
+          console.log(scrollTop, 'availHeight');
         }
       });
     }

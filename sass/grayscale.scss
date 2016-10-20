@@ -283,10 +283,10 @@ a {
   box-shadow: 0 0 0 1px black;
   z-index: -1;
   top: 0;
-  transition: transform .8s ease-out,
-              top transform .8s ease-out,
+  transition: transform .8s ease-out, top transform .8s ease-out;
+  /*
               left transform .8s ease-out,
-              right transform .8s ease-out;
+              right transform .8s ease-out*/;
 }
 
 #alice-fiona {
