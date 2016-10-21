@@ -47,6 +47,7 @@ $(function() {
   };
   $(document).on('scroll.scrollchecker', scrollChecker);
   scrollChecker();
+  //$(this).on(addClass('in-view');
 });
 
 // Closes the Responsive Menu on Menu Item Click

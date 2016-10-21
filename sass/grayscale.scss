@@ -118,8 +118,6 @@ a {
           color:white;
           text-shadow: 0 0 3px black;
         }
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
         &.top-nav-collapse {
             a {
@@ -142,8 +140,6 @@ a {
     color: white;
     text-shadow: 0 0 10px black;
     background: url(../img/intro_bg.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
     .intro-body {
         display: table-cell;
@@ -199,7 +195,7 @@ a {
         background: rgba(black, 0.1);
     }
     i.animated {
-        transition-property: -webkit-transform;
+        transition-property: transform;
         transition-duration: 1s;
     }
     &:hover {
@@ -212,21 +208,7 @@ a {
     }
 }
 
-@-webkit-keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@-moz-keyframes pulse {
+@keyframes pulse {
     from {
         transform: scale(1);
     }
@@ -249,17 +231,19 @@ a {
   padding: 40px;
   position: relative;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 30px rgba(0, 0, 0, 0.08);
+
 }
+
 .paper-box:before, .paper-box:after {
 	position: absolute;
 	width: 40%;
 	height: 10px;
 	content: ' ';
 	left: 12px;
-	bottom: 16px;
+	bottom: 10px;
 	background: transparent;
 	transform: skew(-5deg) rotate(-5deg);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 	z-index: -1;
 }
 
@@ -269,36 +253,23 @@ a {
 	transform: skew(5deg) rotate(5deg);
 }
 
-.panel-block-bg {
-  background-color: rgba(0, 0, 0, 0.43);
-  padding: 15px;
-  border-radius: 15px;
-  border: 1px solid black;
-}
-
-.image-bg-section {
-    width: 100%;
-    padding: 50px 0;
-    margin-top: 100px;
-    color: white;
-    background-color: black;
-    background-size: cover;
-}
 .photo-card {
   position: absolute;
   top:0;
   border:3px solid white;
-  box-shadow: 0 0 0 1px black, inset 0 0 10px rgba(0, 0, 0, 0.08);
-  z-index: -1;
-  transform: rotate3d(0,1,1, 90deg);
+  box-shadow: 18px 18px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
+  z-index: -5;
+  transform: scaleZ(2.8) rotate3d(0,1,1, 90deg);
   transform-origin: center;
-  transition: transform 1.3s ease-out;
+  transition: transform 1.3s ease-out, box-shadow 1.3s ease-out;
   @media(max-width:768px) {
     display: none;
   }
   visibility: hidden;
   &.in-view {
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
     visibility: visible;
+    transform: scaleZ(1)
   }
 }
 
@@ -307,7 +278,23 @@ a {
   width: 400px;
   height: 271px;
   &.in-view {
-    transform: rotate(-25deg) translate(-290px,-160px);
+    transform: translate(-290px,-160px) rotate(-25deg);
+  }
+}
+#ida-stefan {
+  background: url(../img/ida-stefan.jpg) no-repeat center center;
+  width: 400px;
+  height: 472px;
+  &.in-view {
+    transform: translate(510px,-160px)  rotate(-25deg);
+  }
+}
+#long-time-ago {
+  background: url(../img/long-time-ago.jpg) no-repeat center center;
+  width: 293px;
+  height: 453px;
+  &.in-view {
+    transform: rotate(-25deg) translate(-290px,160px);
   }
 }
 #fiona {
@@ -315,7 +302,7 @@ a {
   width: 300px;
   height: 400px;
   &.in-view {
-    transform: rotate(20deg) translate(450px,100px);
+    transform: rotate(20deg) translate(350px,260px);
   }
 }
 #no-post {
@@ -340,7 +327,15 @@ a {
   height: 451px;
   transform: rotate3d(1,1,1, 180deg);
   &.in-view {
-    transform: rotate(25deg) translate(540px, -100px);
+    transform: translate(540px, -100px) rotate(-25deg);
+  }
+}
+#vigsel {
+  background: url(../img/vigsel1.jpg) no-repeat center center;
+  width: 400px;
+  height: 400px;
+  &.in-view {
+    transform: translate(-440px, -140px) rotate(25deg);
   }
 }
 #rinkaby-tables {
@@ -358,7 +353,25 @@ a {
   width: 400px;
   height: 300px;
   &.in-view {
-    transform: rotate(40deg) translate(140px, 550px);
+    transform:  translate(500px, 550px) rotate(-20deg);
+  }
+}
+#bandet {
+  background: url(../img/bandet.jpg) no-repeat center center;
+  background-size: cover;
+  width: 449px;
+  height: 300px;
+  &.in-view {
+    transform:  translate(440px, -10px) rotate(20deg);
+  }
+}
+#glas {
+  background: url(../img/glas.jpg) no-repeat center center;
+  background-size: cover;
+  width: 300px;
+  height: 450px;
+  &.in-view {
+    transform:  translate(-440px, 350px) rotate(-20deg);
   }
 }
 

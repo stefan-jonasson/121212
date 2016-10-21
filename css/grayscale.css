@@ -87,8 +87,6 @@ a {
       border-bottom: none;
       letter-spacing: 1px;
       background: transparent;
-      -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
-      -moz-transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out;
       transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out; }
       .navbar-custom a {
         color: white;
@@ -110,8 +108,6 @@ a {
   color: white;
   text-shadow: 0 0 10px black;
   background: url(../img/intro_bg.jpg) no-repeat bottom center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover; }
   .intro .intro-body {
     display: table-cell;
@@ -158,7 +154,7 @@ a {
     color: white;
     background: rgba(0, 0, 0, 0.1); }
   .btn-circle i.animated {
-    transition-property: -webkit-transform;
+    transition-property: transform;
     transition-duration: 1s; }
   .btn-circle:hover i.animated {
     animation-name: pulse;
@@ -166,15 +162,7 @@ a {
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
 
-@-webkit-keyframes pulse {
-  from {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.2); }
-  100% {
-    transform: scale(1); } }
-
-@-moz-keyframes pulse {
+@keyframes pulse {
   from {
     transform: scale(1); }
   50% {
@@ -197,10 +185,10 @@ a {
   height: 10px;
   content: ' ';
   left: 12px;
-  bottom: 16px;
+  bottom: 10px;
   background: transparent;
   transform: skew(-5deg) rotate(-5deg);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   z-index: -1; }
 
 .paper-box:after {
@@ -208,49 +196,51 @@ a {
   right: 12px;
   transform: skew(5deg) rotate(5deg); }
 
-.panel-block-bg {
-  background-color: rgba(0, 0, 0, 0.43);
-  padding: 15px;
-  border-radius: 15px;
-  border: 1px solid black; }
-
-.image-bg-section {
-  width: 100%;
-  padding: 50px 0;
-  margin-top: 100px;
-  color: white;
-  background-color: black;
-  background-size: cover; }
-
 .photo-card {
   position: absolute;
   top: 0;
   border: 3px solid white;
-  box-shadow: 0 0 0 1px black, inset 0 0 10px rgba(0, 0, 0, 0.08);
-  z-index: -1;
-  transform: rotate3d(0, 1, 1, 90deg);
+  box-shadow: 18px 18px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
+  z-index: -5;
+  transform: scaleZ(2.8) rotate3d(0, 1, 1, 90deg);
   transform-origin: center;
-  transition: transform 1.3s ease-out;
+  transition: transform 1.3s ease-out, box-shadow 1.3s ease-out;
   visibility: hidden; }
   @media (max-width: 768px) {
     .photo-card {
       display: none; } }
   .photo-card.in-view {
-    visibility: visible; }
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    transform: scaleZ(1); }
 
 #alice-fiona {
   background: url(../img/alice-fiona-small.jpg) no-repeat center center;
   width: 400px;
   height: 271px; }
   #alice-fiona.in-view {
-    transform: rotate(-25deg) translate(-290px, -160px); }
+    transform: translate(-290px, -160px) rotate(-25deg); }
+
+#ida-stefan {
+  background: url(../img/ida-stefan.jpg) no-repeat center center;
+  width: 400px;
+  height: 472px; }
+  #ida-stefan.in-view {
+    transform: translate(510px, -160px) rotate(-25deg); }
+
+#long-time-ago {
+  background: url(../img/long-time-ago.jpg) no-repeat center center;
+  width: 293px;
+  height: 453px; }
+  #long-time-ago.in-view {
+    transform: rotate(-25deg) translate(-290px, 160px); }
 
 #fiona {
   background: url(../img/fiona-small.jpg) no-repeat center center;
   width: 300px;
   height: 400px; }
   #fiona.in-view {
-    transform: rotate(20deg) translate(450px, 100px); }
+    transform: rotate(20deg) translate(350px, 260px); }
 
 #no-post {
   background: url(../img/no-post.jpg) no-repeat center center;
@@ -272,7 +262,14 @@ a {
   height: 451px;
   transform: rotate3d(1, 1, 1, 180deg); }
   #kyrka.in-view {
-    transform: rotate(25deg) translate(540px, -100px); }
+    transform: translate(540px, -100px) rotate(-25deg); }
+
+#vigsel {
+  background: url(../img/vigsel1.jpg) no-repeat center center;
+  width: 400px;
+  height: 400px; }
+  #vigsel.in-view {
+    transform: translate(-440px, -140px) rotate(25deg); }
 
 #rinkaby-tables {
   background: url(../img/rinkaby_tables.jpg) no-repeat center center;
@@ -288,7 +285,23 @@ a {
   width: 400px;
   height: 300px; }
   #rinkaby-spring.in-view {
-    transform: rotate(40deg) translate(140px, 550px); }
+    transform: translate(500px, 550px) rotate(-20deg); }
+
+#bandet {
+  background: url(../img/bandet.jpg) no-repeat center center;
+  background-size: cover;
+  width: 449px;
+  height: 300px; }
+  #bandet.in-view {
+    transform: translate(440px, -10px) rotate(20deg); }
+
+#glas {
+  background: url(../img/glas.jpg) no-repeat center center;
+  background-size: cover;
+  width: 300px;
+  height: 450px; }
+  #glas.in-view {
+    transform: translate(-440px, 350px) rotate(-20deg); }
 
 #rsvp p.help-block {
   font-size: 0.9em; }
