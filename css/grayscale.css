@@ -21,6 +21,11 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px; }
 
+@media (max-width: 320px) {
+  .container h2, .container h3 {
+    font-size: 20px;
+    line-height: 1.3; } }
+
 .container h4,
 .container h5,
 .container h6 {
@@ -65,8 +70,6 @@ a {
     .navbar-custom .navbar-brand:focus {
       outline: none; }
   .navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out; }
     .navbar-custom .nav li a:hover {
       color: black;
@@ -177,6 +180,7 @@ a {
   background-color: white;
   padding: 40px;
   position: relative;
+  border: 1px solid #BBB;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 30px rgba(0, 0, 0, 0.08); }
 
 .paper-box:before, .paper-box:after {
@@ -185,7 +189,7 @@ a {
   height: 10px;
   content: ' ';
   left: 12px;
-  bottom: 10px;
+  bottom: 12px;
   background: transparent;
   transform: skew(-5deg) rotate(-5deg);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
@@ -200,9 +204,9 @@ a {
   position: absolute;
   top: 0;
   border: 3px solid white;
-  box-shadow: 18px 18px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
+  /*  box-shadow: 18px 18px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
+*/
   z-index: -5;
-  transform: scaleZ(2.8) rotate3d(0, 1, 1, 90deg);
   transform-origin: center;
   transition: transform 1.3s ease-out, box-shadow 1.3s ease-out;
   visibility: hidden; }
@@ -210,7 +214,7 @@ a {
     .photo-card {
       display: none; } }
   .photo-card.in-view {
-    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.8);
     visibility: visible;
     transform: scaleZ(1); }
 

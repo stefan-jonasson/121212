@@ -83,13 +83,11 @@ function initMap() {
   new google.maps.Marker({
     position: mapRinkabyCenter,
     map: map,
-    label: "Rinkabygård",
     icon: imageCake
   });
   new google.maps.Marker({
     position: mapChurchCenter,
     map: map,
-    label: "Kyrkan",
     icon: imageChurch
   });
   var infoWindow = new google.maps.InfoWindow({map: map});
