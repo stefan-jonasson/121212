@@ -27,6 +27,34 @@ $(function() {
     });
 });
 
+
+$('#rsvp').on('submit', 'form', function(e) {
+    e.preventDefault();
+    var rsvp = {
+      "name": $(this).find("[name=name]").val(),
+      "email": $(this).find("[name=email]").val(),
+      "phone": $(this).find("[name=phone]").val(),
+      "comment": $(this).find("[name=comment]").val(),
+      "attending": $(this).find("#rsvp-status1").is(':checked')
+    };
+    $.ajax({
+      type: "POST",
+      url: 'http://localhost:8080/new',
+      data: JSON.stringify(rsvp),
+      success: function (data) {
+        console.log(data)
+      },
+      contentType: "application/json",
+      dataType: 'json'
+    }).fail(function(result, data) {
+      console.log(result)
+      console.log(data)
+
+    });
+
+    console.log(rsvp);
+});
+
 // jQuery updating phto-card classes when scrolled into view
 $(function() {
   var scrollChecker = function() {
