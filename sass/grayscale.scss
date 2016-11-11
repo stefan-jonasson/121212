@@ -369,7 +369,7 @@ a {
   width: 400px;
   height: 300px;
   &.in-view {
-    transform: rotate(25deg) translate(-440px, 100px);
+    transform: rotate(25deg) translate(100px, 1400px);
   }
 }
 #rinkaby-spring {
@@ -387,7 +387,7 @@ a {
   width: 449px;
   height: 300px;
   &.in-view {
-    transform:  translate(440px, -10px) rotate(20deg);
+    transform:  translate(460px, 1050px) rotate(45deg);
   }
 }
 #glas {
