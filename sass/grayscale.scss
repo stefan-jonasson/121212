@@ -50,7 +50,7 @@ h6 {
 }
 
 p {
-  line-height: 1.1em;
+  line-height: 1.5em;
   margin: 0 0 1em;
   & + h2,
   & + h3,
@@ -147,15 +147,6 @@ a {
 }
 
 .intro {
-  p {
-  }
-  h1 {
-    color:white;
-  }
-
-}
-
-.intro {
     font-family: 'Coneria Script',Helvetica,Arial,sans-serif;
     color:white;
     display: table;
@@ -172,6 +163,7 @@ a {
         vertical-align: middle;
         font-size: 40px;
         .brand-heading {
+            color:white;
             font-size: 1em;
             font-weight: 600;
         }
@@ -261,7 +253,6 @@ a {
 
   .paper-box {
     position: absolute;
-    z-index: 1;
     transition: transform 1.3s ease-in-out;
   }
   .submit-message {
