@@ -42,7 +42,7 @@ $('#rsvp').on('submit', 'form', function(e) {
       url: 'http://localhost:8080/new',
       data: JSON.stringify(rsvp),
       success: function (data) {
-        console.log(data)
+        $('#rsvp').addClass('submitted');
       },
       contentType: "application/json",
       dataType: 'json'
@@ -51,9 +51,13 @@ $('#rsvp').on('submit', 'form', function(e) {
       console.log(data)
 
     });
-
-    console.log(rsvp);
 });
+$('#new-post').on('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $('#rsvp').removeClass('submitted');
+});
+
 
 // jQuery updating phto-card classes when scrolled into view
 $(function() {
