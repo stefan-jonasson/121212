@@ -1,14 +1,8 @@
-@font-face {
-  font-family: "Coneria Script";
-  src: url("//fast.fonts.net/dv2/2/bb986f78-8c93-4ab2-af86-27f480195294.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4");
-  src: url("//fast.fonts.net/dv2/2/bb986f78-8c93-4ab2-af86-27f480195294.eot?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#iefix") format("embedded-opentype"), url("//fast.fonts.net/dv2/14/2d04de27-1d9c-4cb9-a412-806e7378279e.woff2?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff2"), url("//fast.fonts.net/dv2/3/b09d9468-1bdb-47b2-a099-12b7a6b7ba21.woff?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff"), url("//fast.fonts.net/dv2/1/42768796-113c-471a-b868-0c46a9162ad1.ttf?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("truetype"), url("//fast.fonts.net/dv2/11/ccc5fc5b-f2ef-4abf-89e9-722f76e00cd9.svg?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4#ccc5fc5b-f2ef-4abf-89e9-722f76e00cd9") format("svg"); }
-
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Coneria Script', cursive;
-  line-height: 30px;
-  font-size: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
   color: #333;
   background: url(../img/confectionary.png) #fbfbfb; }
 
@@ -16,31 +10,24 @@ html {
   width: 100%;
   height: 100%; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Coneria Script',Helvetica,Arial,sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Great Vibes', cursive;
   margin: 0.5em 0 0.5em;
   color: #666;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 2em; }
 
 @media (max-width: 320px) {
-  .container h2,
-  .container h3 {
+  .container h2, .container h3 {
     font-size: 20px;
     line-height: 1.3; } }
 
-.container h4,
-.container h5,
-.container h6 {
+.container h4, .container h5, .container h6 {
   margin: 0 0 10px; }
 
 .form-control,
 .content-section {
-  font-size: 24px; }
+  font-size: 30px; }
 
 p {
   line-height: 1.5em;
@@ -114,7 +101,7 @@ a {
           text-shadow: none; } }
 
 .intro {
-  font-family: 'Coneria Script',Helvetica,Arial,sans-serif;
+  font-family: 'Great Vibes', cursive;
   color: white;
   display: table;
   width: 100%;
