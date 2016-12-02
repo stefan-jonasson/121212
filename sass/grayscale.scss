@@ -1,22 +1,35 @@
 @import "variables";
 @import "mixins";
 
-body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Farsan', cursive;
-    font-size: 30px;
-    color: $text;
-    background: url(../img/confectionary.png) $bgcolor;
-    overflow-x: hidden;
-}
 
 html {
     width: 100%;
     height: 100%;
 }
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Farsan', cursive;
+    font-size: 20px;
+    color: $text;
+    background: url(../img/confectionary.png) $bgcolor;
+
+    /* Small devices (tablets, $breakpointLarge and up) */
+    @media (min-width: $breakpointLarge) {
+      font-size: 30px;
+    }
+
+}
+
+.body-container {
+    position: absolute;
+    left:0;
+    right:0;
+    overflow-x: hidden;
+}
+
 h1 {
-  font-size: 3em;
+  font-size: 5em;
 }
 h2 {
   font-size: 2.5em;
@@ -34,15 +47,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5em;
     color: #666;
     font-weight: bold;
-}
-
-.container {
-  h2, h3 {
-    @media(max-width:320px) {
-        font-size: 20px;
-        line-height: 1.3;
+    &:first-child {
+      margin-top: 0;
     }
-  }
 }
 
 .form-control {
@@ -119,7 +126,7 @@ a {
             }
         }
     }
-    @media(min-width:768px) {
+    @media(min-width:$breakpointLarge) {
         padding: 20px 0;
         border-bottom: none;
         letter-spacing: 1px;
@@ -156,35 +163,12 @@ a {
     .intro-body {
         display: table-cell;
         vertical-align: middle;
-        font-size: 40px;
         .brand-heading {
             color:white;
-            font-size: 1em;
             font-weight: 600;
         }
         .intro-text {
-            font-size: .6em;
-        }
-    }
-    @media(min-width:768px) {
-        height: 100%;
-        padding: 0;
-        .intro-body {
-          font-size: 100px;
-        }
-    }
-    @media(min-width:768px) {
-        height: 100%;
-        padding: 0;
-        .intro-body {
-          font-size: 100px;
-        }
-    }
-    @media(min-width:1170px) {
-        height: 100%;
-        padding: 0;
-        .intro-body {
-          font-size: 150px;
+          font-size: 3em;
         }
     }
 }
@@ -242,7 +226,7 @@ a {
 
 .paper-box {
   background-color: white;
-  padding: 40px;
+  padding: 30px 40px;
   position: relative;
   border: 1px solid #BBB;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 30px rgba(0, 0, 0, 0.08);
@@ -276,7 +260,7 @@ a {
 */  z-index: -5;
   transform-origin: center;
   transition: transform 1.3s ease-out, box-shadow 1.3s ease-out;
-  @media(max-width:768px) {
+  @media(max-width:$breakpointLarge) {
     display: none;
   }
   visibility: hidden;
@@ -285,7 +269,22 @@ a {
     visibility: visible;
   }
 }
-
+.mobile-message {
+  display: none;
+  padding: 0 15px;
+  @media(max-width:$breakpointLarge) {
+    display: block;
+  }
+  .alert {
+    border:2px solid #FFAAAA;
+    border-radius: 4px;
+    background-color: #FEFAFA;
+    color: #FF8888;
+    padding: 15px;
+    font-size: 22px;
+    margin: 20px 0 -80px 0;
+  }
+}
 #alice-fiona {
   background: url(../img/alice-fiona-small.jpg) no-repeat center center;
   width: 400px;
@@ -300,6 +299,14 @@ a {
   height: 472px;
   &.in-view {
     transform: translate(510px,-160px)  rotate(-25deg);
+  }
+}
+#baltazar {
+  background: url(../img/baltazar.jpg) no-repeat center center;
+  width: 300px;
+  height: 400px;
+  &.in-view {
+    transform: translate(430px,-160px)  rotate(-15deg);
   }
 }
 #long-time-ago {
@@ -415,7 +422,7 @@ a {
 }
 #map {
     width: 100%;
-    height: 400px;
+    height: 600px;
 }
 
 @media(min-width:767px) {

@@ -57,13 +57,13 @@
                         <a class="page-scroll" href="#rsvp">RSVP</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#other">Bröllopsgåva</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#wedding-day">Bröllopsdagen</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#schema">Hålltider</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#other">Bröllopsgåva</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#map-section">Karta</a>
@@ -89,244 +89,242 @@
             </div>
         </div>
     </header>
-
-    <!-- About Section -->
-    <section id="about" class="content-section">
-      <div class="container">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="paper-box">
-            <h3>Om Bröllopet</h3>
-            <p>Efter både villa, Audi och katt så friade Ida den 12-12-12!</p>
-            <p>Konventionella som vi är så skedde detta på en chatt när vi båda satt på jobbet,
-               självklart sa Stefan Ja! Därefter så köpte vi ringar på lunchen!</p>
-            <p>Traditionen säger att man skall ha bröllopet inom ett år efter förlovningen, men vi såg istället till att skaffa två ungar.</p>
-            <p>Än en gång fick Ida sätta bollen i rullning och efter våfflor och smågrisar bokades ladan vid Rinkaby gård.</p>
-            <p>Vi ser verkligen fram mot denna tillställning och hoppas att vi kommer ha en fantastisk dag tillsammans!</p>
-          </div>
-          <div id="alice-fiona" class="photo-card view-marker"></div>
-          <div id="fiona" class="photo-card view-marker"></div>
-          <div id="long-time-ago" class="photo-card view-marker"></div>
-          <div id="ida-stefan" class="photo-card view-marker"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RSVP Section -->
-    <section id="rsvp" class="content-section">
-      <div class="container">
-        <div class="col-sm-8">
-          <form>
-            <div class="submit-message paper-box">
-              <h3>Tack!</h3>
-              <p>Ditt svar är nu registrerat, för att anmäla någon annan eller ändra något klicka här:</p>
-              <button type="reset" class="btn btn-default btn-lg" id="new-post">Skicka ny RSVP</button>
+    <div class="mobile-message">
+      <div class="alert">Webbsidan upplevs bäst på större skärmar!</div>
+    </div>
+    <div class="body-container">
+      <!-- About Section -->
+      <section id="about" class="container content-section">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="paper-box">
+              <h2>Om Bröllopet</h2>
+              <p>Efter både villa, Audi och katt friade Ida den 12-12-12!</p>
+              <p>Konventionella som vi är, skedde detta på en chatt när vi båda satt på jobbet,
+                 självklart sa Stefan Ja! Därefter köpte vi ringar på lunchen!</p>
+              <p>Traditionen säger att man skall ha bröllopet inom ett år efter förlovningen, men vi såg istället till att skaffa två ungar.</p>
+              <p>Än en gång fick Ida sätta bollen i rullning och efter våfflor och smågrisar bokades ladan vid Rinkaby Gård.</p>
+              <p>Vi ser verkligen fram mot denna tillställning och hoppas att vi kommer ha en fantastisk dag tillsammans!</p>
             </div>
-            <div class="submit-form paper-box">
-              <h3>R.s.v.p.</h3>
-              <p>För att vi skall kunna få till allt det praktiska så behöver vi veta om du/ni kommer.</p>
-              <p>Fyll i nedanstånde formulär och berätta om ni kan komma eller inte, vi behöver få in svar innan <strong>2017-02-01</strong>.</p>
-              <div class="form-group">
-                <label for="name">Namn</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Förnamn Efternamn">
+            <div id="alice-fiona" class="photo-card view-marker"></div>
+            <div id="fiona" class="photo-card view-marker"></div>
+            <div id="long-time-ago" class="photo-card view-marker"></div>
+            <div id="baltazar" class="photo-card view-marker"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP Section -->
+      <section id="rsvp" class="container content-section">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1">
+            <form>
+              <div class="submit-message paper-box">
+                <h2>Tack!</h2>
+                <p>Ditt svar är nu registrerat, för att anmäla någon annan eller ändra något klicka här:</p>
+                <button type="reset" class="btn btn-default btn-lg" id="new-post">Skicka ny RSVP</button>
               </div>
-              <div class="form-group">
-                <label for="inputEmail1">E-post</label>
-                <input type="text" class="form-control" id="inputEmail1" name="email" placeholder="namn@domain.com">
-              </div>
-              <div class="form-group">
-                <label for="inputPhone1">Telefon</label>
-                <input type="text" class="form-control" id="inputPhone1" name="phone" placeholder="070-123123">
-              </div>
-              <div class="form-group">
-                <label for="comment">Kommentar</label>
-                <textarea id="comment" class="form-control" name="comment"></textarea>
-                <p class="help-block">T.ex. Allergier eller annat övrigt som kan vara bra för oss att veta.</p>
-              </div>
-              <div class="form-group">
-              <div class="radio">
-                  <label>
-                    <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
-                    Jag kommer
-                  </label>
+              <div class="submit-form paper-box">
+                <h3>R.S.V.P.</h3>
+                <p>För att vi skall kunna få till allt det praktiska behöver vi veta om du/ni kommer.</p>
+                <p>Fyll i nedanstånde formulär och berätta om ni kan komma eller inte. Vi behöver få in svar senast <strong>2017-02-01</strong>.</p>
+                <div class="form-group">
+                  <label for="name">Namn</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Förnamn Efternamn">
                 </div>
+                <div class="form-group">
+                  <label for="inputEmail1">E-post</label>
+                  <input type="text" class="form-control" id="inputEmail1" name="email" placeholder="namn@domain.com">
+                </div>
+                <div class="form-group">
+                  <label for="inputPhone1">Telefon</label>
+                  <input type="text" class="form-control" id="inputPhone1" name="phone" placeholder="070-123123">
+                </div>
+                <div class="form-group">
+                  <label for="comment">Kommentar</label>
+                  <textarea id="comment" class="form-control" name="comment"></textarea>
+                  <p class="help-block">T.ex. Allergier eller annat övrigt som kan vara bra för oss att veta.</p>
+                </div>
+                <div class="form-group">
                 <div class="radio">
-                  <label>
-                    <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
-                    Jag kan inte komma
-                  </label>
+                    <label>
+                      <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
+                      Jag kommer
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
+                      Jag kan inte komma
+                    </label>
+                  </div>
+                  <div class="radio disabled">
+                    <label>
+                      <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
+                      Jag vill inte komma
+                    </label>
+                  </div>
                 </div>
-                <div class="radio disabled">
-                  <label>
-                    <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
-                    Jag vill inte komma
-                  </label>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-default btn-lg">Skicka</button>
-            </dev>
-          </form>
-          <div id="no-post" class="photo-card view-marker"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="other" class="container content-section text-center">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <div class="paper-box">
-                <h2>Bröllopsgåva</h2>
-                <p>Eftersom vi redan har köpt allt vi behöver så vet vi att det kan vara svårt att komma på något att ge i bröllopsgåva.
-                  Om ni vill ge något skulle vi uppskatta ett bidrag till bröllopsresan, insättning görs i så fall på bankkonto: (SEB) <i>5694 - 07 081 97</i></p>
-              </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kyrkan -->
-    <section id="wedding-day" class="content-section">
-      <div class="container">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="paper-box">
-
-            <h2>Vigsel &amp; Fest</h2>
-            <p>
-              Vigsel och fest kommer att hållas 5km söder om växjö i Tävelsås kyrka och festen på Rinkaby gård.<br>
-              Vigseln startar klockan 16:00.
-            </p>
-
-            <h3>Klädkod</H3>
-            <P>Klädkod för bröllop och fest är Kavaj. Vett- och etikettgurun Magdalena Ribbing ger följande definition:</p>
-
-            <h4>Han:</h4>
-            <P>Lite mindre formellt högtidligt än ”mörk kostym”, men fortfarande en hel kostym, lite ljusare om det passar tillfället. Ljus skjorta, slips, eller fluga. Vit skjorta höjer finhetsnivån.
-
-            <h4>Hon:</h4>
-            <p>Klänning/kjol/byxdress som är elegantare än vanlig vardagsklädsel, men inte aftonflott som till ”mörk kostym”.</p>
-            <h3>Fotografering</h3>
-            <p>Du får gärna fotografera hur mycket du vill. För dig som Instagrammar får du gärna tagga dina bilder med #idaochstefan
-
-            <h3>Barn</h3>
-            <p>Vi älskar barn, men denna dag vill vi fira med våra vuxna vänner. Naturligtvis får barn som ammas följa med.</p>
-
-            <h3>Vigsel</h3>
-            <p>Vigselcemonin kommer att hållas i Tävlsås kyrka, som ligger 4km söder om festlokalen.</p>
-            <p>Cermonin börjar klockan 16:00<br>
-            Vägbeskrivning till <a href="#map-section" class="page-scroll" data-target-marker="church">Kyrkan</a> finns nedan.</p>
-
-            <h3>Brudföljevigsel</h3>
-            <p>
-              <em>Tärna:</em> Emma Torsensson<br>
-              <em>Marskalk:</em> Johan Johansson
-            </p>
-
-            <h3>Festen</h3>
-            <p>Dryck ingår under middagen och till desserten. Övrig dryck köpes i baren till en symbolisk summa (10SEK/20SEK) för att det inte skall bli en masssa slattar stående. Det fungerar att betala både med kontanter, Swish och kort.</p>
-
-            <h3>Dansen</h3>
-            <p>För att göra dansgolvet till en plats man aldrig vill lämna så har vi fixat ett riktigt bra band! Vi hoppas det kommer bli bra drag! Fuldans undanbedes <em>ej</em>!</p>
-            <h3>Toastmaster och toastmadame</h3>
-            <p>Toastmadame och toastmaster är <a href="mailto:FIX_ME">[TODO-GET EMAIL]Helena T Johansson</a> och <a href="mailto:per.jodenius@gmail.com">Per Jodenius</a>. Kontakta dem senast den 1 maj för att anmäla tal eller andra påhitt som ni vill hålla under kvällen.
-
-            <h3>Transport</h3>
-            <p>För att underlätta hemfärd till Växjö så har vi hyrt en buss som avgår efter festens slut.</p>
-
-            <h3>Hitta till Rinkaby Gård</h3>
-            <p>Rinkabygård hittar ni <a href="#map-section" data-target-marker="rinkaby" class="page-scroll">här</a></p>
+                <button type="submit" class="btn btn-default btn-lg">Skicka</button>
+              </dev>
+            </form>
+            <div id="no-post" class="photo-card view-marker"></div>
           </div>
-          <div id="kyrka" class="photo-card view-marker"></div>
-          <div id="vigsel" class="photo-card view-marker"></div>
-          <div id="rinkaby-tables" class="photo-card view-marker"></div>
-          <div id="rinkaby-spring" class="photo-card view-marker"></div>
-          <div id="bandet" class="photo-card view-marker"></div>
-          <div id="glas" class="photo-card view-marker"></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Schema Section -->
-    <section id="schema" class="content-section">
-      <div class="container">
-        <div class="col-md-6 col-md-offset-1">
-          <div class="paper-box">
-            <div class="panel-heading">
-              <h3>Hålltider</h3>
+      <!-- Kyrkan -->
+      <section id="wedding-day" class="container content-section">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="paper-box">
+
+              <h2>The big day</h2>
+              <h3>Vigsel</h3>
+              <p>Vigselcemonin kommer att hållas i Tävelsås kyrka, som ligger 4km söder om festlokalen.</p>
+              <p>Cermonin börjar klockan 16:00<br>
+              Vägbeskrivning till <a href="#map-section" class="page-scroll" data-target-marker="church">Kyrkan</a> finns nedan.</p>
+
+              <h3>Brudfölje</h3>
+              <p>
+                <em>Tärna:</em> Emma Torstensson<br>
+                <em>Marskalk:</em> Johan Johansson
+              </p>
+
+              <h3>Klädkod</H3>
+              <P>Klädkod för bröllop och fest är Kavaj. Vett- och etikettgurun Magdalena Ribbing ger följande definition:</p>
+
+              <h4>Han:</h4>
+              <P>Lite mindre formellt högtidligt än ”mörk kostym”, men fortfarande en hel kostym, lite ljusare om det passar tillfället. Ljus skjorta, slips, eller fluga. Vit skjorta höjer finhetsnivån.
+
+              <h4>Hon:</h4>
+              <p>Klänning/kjol/byxdress som är elegantare än vanlig vardagsklädsel, men inte aftonflott som till ”mörk kostym”.</p>
+              <h3>Fotografering</h3>
+              <p>Du får gärna fotografera hur mycket du vill. För dig som Instagrammar får du gärna tagga dina bilder med #idaochstefan
+
+              <h3>Barn</h3>
+              <p>Vi älskar barn, men denna dag vill vi fira med våra vuxna vänner. Naturligtvis får barn som ammas följa med.</p>
+
+              <h3>Festen</h3>
+              <p>Dryck ingår under middagen och till desserten. Övrig dryck köpes i baren till en symbolisk summa (10SEK/20SEK) för att det inte skall bli en masssa slattar stående. Det fungerar att betala med kontanter, Swish och kort.</p>
+
+              <h3>Toastmaster och toastmadame</h3>
+              <p>Toastmadame och toastmaster är <a href="mailto:helena.thuresson@live.se">Helena T Johansson</a> och <a href="mailto:per.jodenius@gmail.com">Per Jodenius</a>. Kontakta dem senast den 1 maj för att anmäla tal eller andra påhitt som ni vill hålla under kvällen.
+
+              <h3>Dansen</h3>
+              <p>För att göra dansgolvet till en plats man aldrig vill lämna har vi fixat ett riktigt bra band! Vi hoppas det kommer bli bra drag! Fuldans undanbedes <em>ej</em>!</p>
+
+              <h3>Transport</h3>
+              <p>För att underlätta hemfärd till Växjö har vi hyrt en buss som avgår efter festens slut.</p>
+
+              <h3>Hitta till Rinkaby Gård</h3>
+              <p>Rinkaby Gård hittar ni <a href="#map-section" data-target-marker="rinkaby" class="page-scroll">här</a></p>
             </div>
-            <div class="panel-body">
-                <p>Dessa tider är det som gäller</p>
-                <table class="table">
-                    <tr>
-                      <th>Tid</th>
-                      <th>Aktivitet</th>
-                      <th class="hidden-xs">Plats</th>
-                    </tr>
+            <div id="kyrka" class="photo-card view-marker"></div>
+            <div id="vigsel" class="photo-card view-marker"></div>
+            <div id="rinkaby-tables" class="photo-card view-marker"></div>
+            <div id="rinkaby-spring" class="photo-card view-marker"></div>
+            <div id="bandet" class="photo-card view-marker"></div>
+            <div id="glas" class="photo-card view-marker"></div>
+          </div>
+        </div>
+      </section>
 
-                    <tr>
-                      <td>16:00</td>
-                      <td>Vigel</td>
-                      <td class="hidden-xs">Tävelsås kyrka</td>
-                    </tr>
-                    <tr>
-                      <td>---</td>
-                      <td>Fler detaljer kommer senare.</td>
-                      <td class="hidden-xs">Rinkaby</td>
-                    </tr>
-                    <tr>
-                      <td>02:15</td>
-                      <td>Buss till växjö</td>
-                      <td class="hidden-xs">Parkering utanför</td>
-                    </tr>
-                </table>
+      <!-- Schema Section -->
+      <section id="schema" class="container content-section">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-1">
+            <div class="paper-box">
+              <div class="panel-heading">
+                <h2>Hålltider</h2>
+              </div>
+              <div class="panel-body">
+                  <p>Dessa tider är det som gäller</p>
+                  <table class="table">
+                      <tr>
+                        <th>Tid</th>
+                        <th>Aktivitet</th>
+                        <th class="hidden-xs">Plats</th>
+                      </tr>
+
+                      <tr>
+                        <td>16:00</td>
+                        <td>Vigsel</td>
+                        <td class="hidden-xs">Tävelsås kyrka</td>
+                      </tr>
+                      <tr>
+                        <td>---</td>
+                        <td>Fler detaljer kommer senare.</td>
+                        <td class="hidden-xs">Rinkaby</td>
+                      </tr>
+                      <tr>
+                        <td>02:15</td>
+                        <td>Buss till växjö</td>
+                        <td class="hidden-xs">Parkering utanför</td>
+                      </tr>
+                  </table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <!-- Contact Section -->
+      <section id="other" class="container content-section text-center">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="paper-box">
+                  <h2>Bröllopsgåva</h2>
+                  <p>Vi vet att det kan vara svårt att komma på något att ge i bröllopsgåva. För att göra det enkelt för er skulle vi uppskatta ett bidrag till bröllopsresan. Vi har ju redan allt annat vi behöver! Insättning i så fall på bankkonto: (SEB) <i>5694 - 07 081 97</i></p>
+                </div>
+              </div>
+          </div>
+      </section>
 
-    <!-- Map Section -->
-    <section id="map-section" class="content-section">
-        <div class="container">
-            <div class="col-md-8 col-md-offset-4">
-              <div class="paper-box">
-                <h2>Vägbeskrivning</h2>
-                <p>Kartan visar vägen till kyrkan och Rinkabygård</p>
-                <div id="map"></div>
-            </div>
-            <div id="this-way-to" class="photo-card view-marker"></div>
-        </div>
-      <div>
-    </section>
+      <!-- Map Section -->
+      <section id="map-section" class="container content-section">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-4">
+                <div class="paper-box">
+                  <h2>Vägbeskrivning</h2>
+                  <p>Kartan visar vägen till kyrkan och Rinkaby Gård</p>
+                  <div id="map"></div>
+              </div>
+              <div id="this-way-to" class="photo-card view-marker"></div>
+          </div>
+        <div>
+      </section>
 
-    <section class="container content-section text-center">
-        <div class="row">
-            <div class="col-md-7 col-md-offset-2">
-                <h4>Vid frågor kontakta oss via e-post</h4>
-                <p>Är det något du undrar över eller bara vill höra av dig och berätta hur roligt du tycker det skall bli att komma på bröllopet. Skicka ett mail eller slå en signal!</p>
-                <p><a href="mailto:jonasson.stefan@gmail.com">jonasson.stefan@gmail.com</a>, <a href="mailto:torstenidis@gmail.com">torstenidis@gmail.com</a></p>
-                <p><a href="callto:0703454597">070-345 45 97</a>, <a href="callto:0708676420">070-867 64 20</a></p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/stefanj" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com/jonasson.stefan" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook Stefan</span></a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com/ida.torstensson.90" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook Ida</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+      <section class="container content-section text-center">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                  <h4>Vid frågor kontakta oss via e-post</h4>
+                  <p>Är det något du undrar över eller bara vill höra av dig och berätta hur roligt du tycker det skall bli att komma på bröllopet. Skicka ett mail eller slå en signal!</p>
+                  <p><a href="mailto:jonasson.stefan@gmail.com">jonasson.stefan@gmail.com</a>, <a href="mailto:torstenidis@gmail.com">torstenidis@gmail.com</a></p>
+                  <p><a href="callto:0703454597">070-345 45 97</a>, <a href="callto:0708676420">070-867 64 20</a></p>
+                  <ul class="list-inline banner-social-buttons">
+                      <li>
+                          <a href="https://twitter.com/stefanj" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                      </li>
+                      <li>
+                          <a href="https://facebook.com/jonasson.stefan" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook Stefan</span></a>
+                      </li>
+                      <li>
+                          <a href="https://facebook.com/ida.torstensson.90" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook Ida</span></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Stefan Jonasson, Ida Torstensson 2016</p>
-        </div>
-    </footer>
+      <!-- Footer -->
+      <footer>
+          <div class="container text-center">
+              <p>Copyright &copy; Stefan Jonasson, Ida Torstensson 2016</p>
+          </div>
+      </footer>
 
+    </div>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
 
