@@ -39,7 +39,7 @@ $('#rsvp').on('submit', 'form', function(e) {
     };
     $.ajax({
       type: "POST",
-      url: 'http://localhost:8080/new',
+      url: '//new',
       data: JSON.stringify(rsvp),
       success: function (data) {
         $('#rsvp').addClass('submitted');
