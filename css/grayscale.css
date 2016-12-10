@@ -193,23 +193,6 @@ a {
   right: 12px;
   transform: skew(5deg) rotate(5deg); }
 
-.photo-card {
-  position: absolute;
-  top: 0;
-  border: 3px solid white;
-  /*  box-shadow: 18px 18px 10px 1px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
-*/
-  z-index: -5;
-  transform-origin: center;
-  transition: transform 1.3s ease-out, box-shadow 1.3s ease-out;
-  visibility: hidden; }
-  @media (max-width: 992px) {
-    .photo-card {
-      display: none; } }
-  .photo-card.in-view {
-    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.8);
-    visibility: visible; }
-
 .mobile-message {
   display: none;
   padding: 0 15px; }
@@ -224,6 +207,23 @@ a {
     padding: 15px;
     font-size: 22px;
     margin: 20px 0 -80px 0; }
+
+.photo-card {
+  position: absolute;
+  top: 0;
+  border: 3px solid white;
+  z-index: -5;
+  transform-origin: center;
+  transition: transform 1.3s ease-out, box-shadow 1.3s ease-out;
+  visibility: hidden; }
+  @media (max-width: 992px) {
+    .photo-card {
+      display: none; } }
+  .photo-card.in-view {
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.8);
+    visibility: visible; }
+  .photo-card.right {
+    right: 0; }
 
 #alice-fiona {
   background: url(../img/alice-fiona-small.jpg) no-repeat center center;
@@ -244,7 +244,7 @@ a {
   width: 300px;
   height: 400px; }
   #baltazar.in-view {
-    transform: translate(430px, -160px) rotate(-15deg); }
+    transform: translate(300px, -60px) rotate(15deg); }
 
 #long-time-ago {
   background: url(../img/long-time-ago.jpg) no-repeat center center;
@@ -258,14 +258,14 @@ a {
   width: 300px;
   height: 400px; }
   #fiona.in-view {
-    transform: rotate(21deg) translate(637px, 346px); }
+    transform: rotate(21deg) translate(437px, 496px); }
 
 #no-post {
   background: url(../img/no-post.jpg) no-repeat center center;
   width: 279px;
   height: 400px; }
   #no-post.in-view {
-    transform: rotate(17deg) translate(789px, 100px); }
+    transform: rotate(17deg) translate(320px, 60px); }
 
 #this-way-to {
   background: url(../img/thiswayto.jpg) no-repeat center center;
@@ -278,68 +278,125 @@ a {
   background: url(../img/kyrka.jpg) no-repeat center center;
   width: 300px;
   height: 451px;
+  top: 300px;
   transform: rotate3d(1, 1, 1, 180deg); }
   #kyrka.in-view {
-    transform: translate(540px, -100px) rotate(-25deg); }
+    transform: translate(300px, 100px) rotate(-15deg); }
 
 #vigsel {
   background: url(../img/vigsel1.jpg) no-repeat center center;
   width: 400px;
   height: 400px; }
   #vigsel.in-view {
-    transform: translate(-440px, -140px) rotate(25deg); }
+    transform: translate(-400px, -100px) rotate(15deg); }
 
 #rinkaby-tables {
   background: url(../img/rinkaby_tables.jpg) no-repeat center center;
   background-size: cover;
+  top: 2000px;
   width: 400px;
   height: 300px; }
   #rinkaby-tables.in-view {
-    transform: translate(-364px, 1400px) rotate(-25deg); }
+    transform: translate(-364px, 100px) rotate(-25deg); }
 
 #rinkaby-spring {
   background: url(../img/rinkaby-spring.jpg) no-repeat center center;
   background-size: cover;
+  top: 1500px;
   width: 400px;
   height: 300px; }
   #rinkaby-spring.in-view {
-    transform: translate(500px, 550px) rotate(-20deg); }
+    transform: translate(350px, 50px) rotate(-20deg); }
 
 #bandet {
   background: url(../img/bandet.jpg) no-repeat center center;
   background-size: cover;
+  top: 2300px;
   width: 449px;
   height: 300px; }
   #bandet.in-view {
-    transform: translate(460px, 1050px) rotate(45deg); }
+    transform: translate(460px, 150px) rotate(45deg); }
 
 #glas {
   background: url(../img/glas.jpg) no-repeat center center;
   background-size: cover;
+  top: 900px;
   width: 300px;
   height: 450px; }
   #glas.in-view {
-    transform: translate(-340px, 550px) rotate(-20deg); }
+    transform: translate(-340px, 50px) rotate(-20deg); }
+
+#buss {
+  background: url(../img/buss.jpg) no-repeat center center;
+  background-size: cover;
+  width: 480px;
+  height: 360px;
+  top: 250px;
+  right: 40px; }
+  #buss.in-view {
+    transform: translate(600px, 50px) rotate(5deg); }
+
+#paradise {
+  background: url(../img/paradise.jpg) no-repeat center center;
+  background-size: cover;
+  top: 50px;
+  width: 400px;
+  height: 224px;
+  right: 0px; }
+  #paradise.in-view {
+    transform: translate(410px, 50px) rotate(20deg); }
+
+#money {
+  background: url(../img/mynt.jpg) no-repeat center center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 267px; }
+  #money.in-view {
+    transform: translate(-300px, 50px) rotate(-20deg); }
 
 #rsvp form {
-  position: relative;
-  /*    height: 871px;*/ }
+  position: relative; }
 
-#rsvp .paper-box {
-  transition: transform 1.3s ease-in-out; }
+#rsvp .paper-box > div {
+  transition: height 1.3s ease-in-out, opacity 1.3s ease-in-out; }
+
+#rsvp .help-block.required {
+  display: none; }
+
+#rsvp .has-error .help-block.required {
+  display: block; }
 
 #rsvp p.help-block {
   font-size: 0.9em; }
 
+#rsvp .error-message {
+  background-color: #FFEFEF;
+  color: #FFAAAA;
+  padding: 1em;
+  display: none; }
+
 #rsvp .submit-message {
-  position: absolute;
-  transform: translateX(-250%); }
+  opacity: 0;
+  height: 0px;
+  overflow: hidden; }
+
+#rsvp.error .error-message {
+  display: block; }
+
+#rsvp.error .submit-form {
+  display: none; }
 
 #rsvp.submitted .submit-message {
-  transform: translateX(0); }
+  opacity: 100;
+  height: auto;
+  overflow: visible; }
 
 #rsvp.submitted .submit-form {
-  transform: translateX(250%); }
+  opacity: 0;
+  height: 0px;
+  overflow: hidden; }
 
 #map {
   width: 100%;

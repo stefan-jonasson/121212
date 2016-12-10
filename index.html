@@ -107,9 +107,9 @@
               <p>Vi ser verkligen fram mot denna tillställning och hoppas att vi kommer ha en fantastisk dag tillsammans!</p>
             </div>
             <div id="alice-fiona" class="photo-card view-marker"></div>
-            <div id="fiona" class="photo-card view-marker"></div>
             <div id="long-time-ago" class="photo-card view-marker"></div>
-            <div id="baltazar" class="photo-card view-marker"></div>
+            <div id="baltazar" class="photo-card view-marker right"></div>
+            <div id="fiona" class="photo-card view-marker right"></div>
           </div>
         </div>
       </section>
@@ -119,56 +119,66 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-1">
             <form>
-              <div class="submit-message paper-box">
-                <h2>Tack!</h2>
-                <p>Ditt svar är nu registrerat, för att anmäla någon annan eller ändra något klicka här:</p>
-                <button type="reset" class="btn btn-default btn-lg" id="new-post">Skicka ny RSVP</button>
-              </div>
-              <div class="submit-form paper-box">
-                <h3>R.S.V.P.</h3>
-                <p>För att vi skall kunna få till allt det praktiska behöver vi veta om du/ni kommer.</p>
-                <p>Fyll i nedanstånde formulär och berätta om ni kan komma eller inte. Vi behöver få in svar senast <strong>2017-02-01</strong>.</p>
-                <div class="form-group">
-                  <label for="name">Namn</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Förnamn Efternamn">
+              <div class="paper-box">
+                <div class="submit-message">
+                  <h2>Tack!</h2>
+                  <p>Ditt svar är nu registrerat, för att anmäla en ny person, klicka på knappen!</p>
+                  <button type="reset" class="btn btn-default btn-lg" id="new-post">Skicka ny RSVP</button>
                 </div>
-                <div class="form-group">
-                  <label for="inputEmail1">E-post</label>
-                  <input type="text" class="form-control" id="inputEmail1" name="email" placeholder="namn@domain.com">
+                <div class="error-message">
+                  <h2>Ooops!</h2>
+                  <p>Aj då, något blev fel, vi har <strong>inte</strong> sparat din anmälan. Skicka ett mail till <a href="mailto:jonasson.stefan@gmail.com">Stefan</a> och säg att han inte kan sin teknik!</p>
+                  <button type="button" class="btn btn-default btn-lg" id="try-again">Pröva igen!</button>
                 </div>
-                <div class="form-group">
-                  <label for="inputPhone1">Telefon</label>
-                  <input type="text" class="form-control" id="inputPhone1" name="phone" placeholder="070-123123">
-                </div>
-                <div class="form-group">
-                  <label for="comment">Kommentar</label>
-                  <textarea id="comment" class="form-control" name="comment"></textarea>
-                  <p class="help-block">T.ex. Allergier eller annat övrigt som kan vara bra för oss att veta.</p>
-                </div>
-                <div class="form-group">
-                <div class="radio">
-                    <label>
-                      <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
-                      Jag kommer
-                    </label>
+                <div class="submit-form">
+                  <h3>R.S.V.P.</h3>
+                  <p>För att vi skall kunna få till allt det praktiska behöver vi veta om du/ni kommer.</p>
+                  <p>Fyll i nedanstånde formulär och berätta om ni kan komma eller inte. Vi behöver få in svar senast <strong>2017-02-01</strong>.</p>
+                  <div class="form-group">
+                    <label for="name">Namn</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Förnamn Efternamn" required2="true">
+                    <p class="help-block required">Fältet måste anges.</p>
                   </div>
+                  <div class="form-group">
+                    <label for="inputEmail1">E-post</label>
+                    <input type="text" class="form-control" id="inputEmail1" name="email" placeholder="namn@domain.com" required2="true">
+                    <p class="help-block required">Fältet måste anges.</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPhone1">Telefon</label>
+                    <input type="text" class="form-control" id="inputPhone1" name="phone" placeholder="070-123123" required2="true">
+                    <p class="help-block required">Fältet måste anges.</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">Kommentar</label>
+                    <textarea id="comment" class="form-control" name="comment"></textarea>
+                    <p class="help-block">T.ex. Allergier eller annat övrigt som kan vara bra för oss att veta.</p>
+                  </div>
+                  <div class="form-group">
                   <div class="radio">
-                    <label>
-                      <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
-                      Jag kan inte komma
-                    </label>
+                      <label>
+                        <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
+                        Jag kommer
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
+                        Jag kan inte komma
+                      </label>
+                    </div>
+                    <div class="radio disabled">
+                      <label>
+                        <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
+                        Jag vill inte komma
+                      </label>
+                    </div>
                   </div>
-                  <div class="radio disabled">
-                    <label>
-                      <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
-                      Jag vill inte komma
-                    </label>
-                  </div>
+                  <button type="submit" class="btn btn-default btn-lg">Skicka</button>
                 </div>
-                <button type="submit" class="btn btn-default btn-lg">Skicka</button>
-              </dev>
+              </div>
             </form>
-            <div id="no-post" class="photo-card view-marker"></div>
+            <div id="no-post" class="photo-card view-marker right"></div>
           </div>
         </div>
       </section>
@@ -220,12 +230,13 @@
               <h3>Hitta till Rinkaby Gård</h3>
               <p>Rinkaby Gård hittar ni <a href="#map-section" data-target-marker="rinkaby" class="page-scroll">här</a></p>
             </div>
-            <div id="kyrka" class="photo-card view-marker"></div>
+
             <div id="vigsel" class="photo-card view-marker"></div>
             <div id="rinkaby-tables" class="photo-card view-marker"></div>
-            <div id="rinkaby-spring" class="photo-card view-marker"></div>
-            <div id="bandet" class="photo-card view-marker"></div>
             <div id="glas" class="photo-card view-marker"></div>
+            <div id="rinkaby-spring" class="photo-card view-marker right"></div>
+            <div id="bandet" class="photo-card view-marker right"></div>
+            <div id="kyrka" class="photo-card view-marker right"></div>
           </div>
         </div>
       </section>
@@ -265,6 +276,7 @@
                   </table>
               </div>
             </div>
+            <div id="buss" class="photo-card view-marker right"></div>
           </div>
         </div>
       </section>
@@ -277,6 +289,8 @@
                   <h2>Bröllopsgåva</h2>
                   <p>Vi vet att det kan vara svårt att komma på något att ge i bröllopsgåva. För att göra det enkelt för er skulle vi uppskatta ett bidrag till bröllopsresan. Vi har ju redan allt annat vi behöver! Insättning i så fall på bankkonto: (SEB) <i>5694 - 07 081 97</i></p>
                 </div>
+                <div id="paradise" class="photo-card view-marker"></div>
+                <div id="money" class="photo-card view-marker"></div>
               </div>
           </div>
       </section>

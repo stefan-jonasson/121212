@@ -30,32 +30,47 @@ $(function() {
 
 $('#rsvp').on('submit', 'form', function(e) {
     e.preventDefault();
-    var rsvp = {
-      "name": $(this).find("[name=name]").val(),
-      "email": $(this).find("[name=email]").val(),
-      "phone": $(this).find("[name=phone]").val(),
-      "comment": $(this).find("[name=comment]").val(),
-      "attending": $(this).find("#rsvp-status1").is(':checked')
-    };
-    $.ajax({
-      type: "POST",
-      url: '//new',
-      data: JSON.stringify(rsvp),
-      success: function (data) {
-        $('#rsvp').addClass('submitted');
-      },
-      contentType: "application/json",
-      dataType: 'json'
-    }).fail(function(result, data) {
-      console.log(result)
-      console.log(data)
+    $(this).find('.has-error').removeClass('has-error');
+    var requiredInput = $(this).find('input[required]').filter(function() {
+       return this.value == "";
+     });
+    if (requiredInput.length > 0) {
+        requiredInput.each(function () {
+          $(this).closest('.form-group').addClass('has-error');
+        });
+    } else {
+      $('html, body').stop().animate({
+          scrollTop: $(e.currentTarget).closest('section').offset().top
+      }, 1000, 'easeInOutExpo');
+      var rsvp = {
+        "name": $(this).find("[name=name]").val(),
+        "email": $(this).find("[name=email]").val(),
+        "phone": $(this).find("[name=phone]").val(),
+        "comment": $(this).find("[name=comment]").val(),
+        "attending": $(this).find("#rsvp-status1").is(':checked')
+      };
+      $.ajax({
+        type: "POST",
+        url: '/new',
+        data: JSON.stringify(rsvp),
+        success: function (data) {
+          $('#rsvp').addClass('submitted');
+        },
+        contentType: "application/json",
+        dataType: 'json'
+      }).fail(function(result, data) {
+          $('#rsvp').addClass('submitted');
 
-    });
+      });
+    }
 });
 $('#new-post').on('click', function(e) {
+  $('#rsvp').removeClass('submitted');
+});
+$('#try-again').on('click', function(e) {
   e.preventDefault();
   e.stopPropagation();
-  $('#rsvp').removeClass('submitted');
+  $('#rsvp').removeClass('error');
 });
 
 
@@ -72,7 +87,7 @@ $(function() {
           $(this).removeClass('view-marker');
           setTimeout(function () {
             $(this).addClass('in-view');
-          }.bind(this), 2600);
+          }.bind(this), 1000 + Math.floor(Math.random() * 1500));
         }
       });
     }
