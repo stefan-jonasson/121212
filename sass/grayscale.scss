@@ -306,10 +306,11 @@ a {
 
 #alice-fiona {
   background: url(../img/alice-fiona-small.jpg) no-repeat center center;
+  top:150px;
   width: 400px;
   height: 271px;
   &.in-view {
-    transform: translate(-290px,-160px) rotate(-25deg);
+    transform: translate(-380px,-160px) rotate(-25deg);
   }
 }
 #ida-stefan {
@@ -322,6 +323,7 @@ a {
 }
 #baltazar {
   background: url(../img/baltazar.jpg) no-repeat center center;
+  top: 80px;
   width: 300px;
   height: 400px;
   &.in-view {
@@ -330,6 +332,7 @@ a {
 }
 #long-time-ago {
   background: url(../img/long-time-ago.jpg) no-repeat center center;
+  top:200px;
   width: 293px;
   height: 453px;
   &.in-view {
@@ -350,14 +353,6 @@ a {
   height: 400px;
   &.in-view {
     transform: rotate(17deg) translate(320px,60px);
-  }
-}
-#this-way-to {
-  background: url(../img/thiswayto.jpg) no-repeat center center;
-  width: 450px;
-  height: 450px;
-  &.in-view {
-    transform: rotate(25deg) translate(-390px, 200px);
   }
 }
 #vigsel {
@@ -407,27 +402,28 @@ a {
     transform: translate(-364px,50px) rotate(5deg);
   }
 }
-
 #bandet {
   background: url(../img/bandet.jpg) no-repeat center center;
   background-size: cover;
-  top: 2500px;
+  top: auto;
+  bottom: 0;
+  right:0px;
   width: 449px;
   height: 300px;
   &.in-view {
-    transform:  translate(-380px, 150px) rotate(65deg);
+    transform:  translate(180px, 240px) rotate(35deg);
   }
 }
-
 #buss {
   background: url(../img/buss.jpg) no-repeat center center;
   background-size: cover;
   width: 480px;
   height: 360px;
-  top: 250px;
+  top: auto;
+  bottom: 0px;
   right: 0px;
   &.in-view {
-    transform:  translate(600px, 50px) rotate(5deg);
+    transform:  translate(500px, 80px) rotate(5deg);
   }
 }
 #paradise {
@@ -483,7 +479,16 @@ a {
   width: 400px;
   height: 159px;
   &.in-view {
-    transform:  translate(-450px, -50px) rotate(-10deg);
+    transform:  translate(-450px, 50px) rotate(-10deg);
+  }
+}
+#this-way-to {
+  background: url(../img/thiswayto.jpg) no-repeat center center;
+  top:300px;
+  width: 450px;
+  height: 450px;
+  &.in-view {
+    transform: rotate(25deg) translate(-440px, 100px);
   }
 }
 
