@@ -99,7 +99,9 @@ $(function() {
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
-    $(this).closest('.collapse').collapse('toggle');
+    if  ( $(document).width() < 768 ) {
+      $(this).closest('.collapse').collapse('toggle');
+    }
 });
 
 function initMap() {

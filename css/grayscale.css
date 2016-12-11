@@ -50,8 +50,6 @@ p {
 
 a {
   color: #888;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
   a:hover, a:focus {
     text-decoration: none;
@@ -67,10 +65,10 @@ a {
   font-size: 14px;
   font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
-  background-color: #fbfbfb; }
+  background-color: #fbfbfb;
+  color: #666; }
   .navbar-custom .navbar-toggle {
-    padding: 4px 6px;
-    color: #333; }
+    padding: 4px 6px; }
     .navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
       outline: none; }
   .navbar-custom .navbar-brand {
@@ -100,16 +98,26 @@ a {
       letter-spacing: 1px;
       background: transparent;
       transition: background .5s ease-in-out,padding .5s ease-in-out, color .5s ease-in-out; }
-      .navbar-custom a {
+      .navbar-custom .navbar-brand {
+        color: white; }
+      .navbar-custom .nav li a {
         color: white;
         text-shadow: 0 0 3px black; }
+        .navbar-custom .nav li a:hover {
+          color: #FFAAAA; }
       .navbar-custom.top-nav-collapse {
         padding: 0;
         background: #fbfbfb;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-        .navbar-custom.top-nav-collapse a {
-          color: #333;
-          text-shadow: none; } }
+        .navbar-custom.top-nav-collapse .navbar-brand {
+          color: #666; }
+        .navbar-custom.top-nav-collapse .nav li.active a {
+          color: black; }
+        .navbar-custom.top-nav-collapse .nav li a {
+          color: #666;
+          text-shadow: none; }
+          .navbar-custom.top-nav-collapse .nav li a:hover {
+            color: black; } }
 
 .intro {
   font-family: 'Great Vibes', cursive;
@@ -167,7 +175,7 @@ a {
     transform: scale(1); } }
 
 .content-section {
-  padding-top: 100px; }
+  padding-top: 70px; }
 
 .paper-box {
   background-color: white;
@@ -206,7 +214,7 @@ a {
     color: #FF8888;
     padding: 15px;
     font-size: 22px;
-    margin: 20px 0 -80px 0; }
+    margin: 20px 0 -10px 0; }
 
 .photo-card {
   position: absolute;
@@ -274,57 +282,56 @@ a {
   #this-way-to.in-view {
     transform: rotate(25deg) translate(-390px, 200px); }
 
-#kyrka {
-  background: url(../img/kyrka.jpg) no-repeat center center;
-  width: 300px;
-  height: 451px;
-  top: 300px;
-  transform: rotate3d(1, 1, 1, 180deg); }
-  #kyrka.in-view {
-    transform: translate(300px, 100px) rotate(-15deg); }
-
 #vigsel {
   background: url(../img/vigsel1.jpg) no-repeat center center;
   width: 400px;
   height: 400px; }
   #vigsel.in-view {
-    transform: translate(-400px, -100px) rotate(15deg); }
+    transform: translate(-400px, 30px) rotate(15deg); }
 
-#rinkaby-tables {
-  background: url(../img/rinkaby_tables.jpg) no-repeat center center;
-  background-size: cover;
-  top: 2000px;
-  width: 400px;
-  height: 300px; }
-  #rinkaby-tables.in-view {
-    transform: translate(-364px, 100px) rotate(-25deg); }
-
-#rinkaby-spring {
-  background: url(../img/rinkaby-spring.jpg) no-repeat center center;
-  background-size: cover;
-  top: 1500px;
-  width: 400px;
-  height: 300px; }
-  #rinkaby-spring.in-view {
-    transform: translate(350px, 50px) rotate(-20deg); }
-
-#bandet {
-  background: url(../img/bandet.jpg) no-repeat center center;
-  background-size: cover;
-  top: 2300px;
-  width: 449px;
-  height: 300px; }
-  #bandet.in-view {
-    transform: translate(460px, 150px) rotate(45deg); }
+#kyrka {
+  background: url(../img/kyrka.jpg) no-repeat center center;
+  width: 300px;
+  height: 451px;
+  top: 300px; }
+  #kyrka.in-view {
+    transform: translate(-300px, 260px) rotate(-15deg); }
 
 #glas {
   background: url(../img/glas.jpg) no-repeat center center;
   background-size: cover;
-  top: 900px;
+  top: 1100px;
   width: 300px;
   height: 450px; }
   #glas.in-view {
-    transform: translate(-340px, 50px) rotate(-20deg); }
+    transform: translate(-340px, 50px) rotate(2deg); }
+
+#rinkaby-spring {
+  background: url(../img/rinkaby-spring.jpg) no-repeat center center;
+  background-size: cover;
+  top: 1650px;
+  width: 400px;
+  height: 300px; }
+  #rinkaby-spring.in-view {
+    transform: translate(-380px, 50px) rotate(-20deg); }
+
+#rinkaby-tables {
+  background: url(../img/rinkaby_tables.jpg) no-repeat center center;
+  background-size: cover;
+  top: 2100px;
+  width: 400px;
+  height: 300px; }
+  #rinkaby-tables.in-view {
+    transform: translate(-364px, 50px) rotate(5deg); }
+
+#bandet {
+  background: url(../img/bandet.jpg) no-repeat center center;
+  background-size: cover;
+  top: 2500px;
+  width: 449px;
+  height: 300px; }
+  #bandet.in-view {
+    transform: translate(-380px, 150px) rotate(65deg); }
 
 #buss {
   background: url(../img/buss.jpg) no-repeat center center;
@@ -332,7 +339,7 @@ a {
   width: 480px;
   height: 360px;
   top: 250px;
-  right: 40px; }
+  right: 0px; }
   #buss.in-view {
     transform: translate(600px, 50px) rotate(5deg); }
 
@@ -355,6 +362,37 @@ a {
   height: 267px; }
   #money.in-view {
     transform: translate(-300px, 50px) rotate(-20deg); }
+
+#pm-rum {
+  background: url(../img/pm-rum.jpg) no-repeat center center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 159px; }
+  #pm-rum.in-view {
+    transform: translate(-460px, 50px) rotate(-7deg); }
+
+#tofta-rum {
+  background: url(../img/tofta-rum.jpg) no-repeat center center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 253px; }
+  #tofta-rum.in-view {
+    transform: translate(-410px, 340px) rotate(9deg); }
+
+#pm-mat {
+  background: url(../img/pm-mat.jpg) no-repeat center center;
+  background-size: cover;
+  top: auto;
+  bottom: 0;
+  left: 30px;
+  width: 400px;
+  height: 159px; }
+  #pm-mat.in-view {
+    transform: translate(-450px, -50px) rotate(-10deg); }
 
 #rsvp form {
   position: relative; }
@@ -404,7 +442,7 @@ a {
 
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 250px; }
+    padding-top: 125px; }
     .content-section.image-bg-section {
       margin-top: 250px;
       padding: 100px 0; } }
@@ -413,8 +451,6 @@ a {
   text-transform: uppercase;
   font-family: "Farsan","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 400;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   border-radius: 0; }
 
