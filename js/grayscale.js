@@ -51,7 +51,7 @@ $('#rsvp').on('submit', 'form', function(e) {
       };
       $.ajax({
         type: "POST",
-        url: '/new',
+        url: '/rsvps',
         data: JSON.stringify(rsvp),
         success: function (data) {
           $('#rsvp').addClass('submitted');
