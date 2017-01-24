@@ -416,6 +416,23 @@ a {
 #rsvp p.help-block {
   font-size: 0.9em; }
 
+#rsvp #buss-choice .alert-danger {
+  display: none; }
+
+#rsvp #buss-choice.has-error .alert-danger {
+  display: block; }
+
+#rsvp .radio label {
+  padding-left: 1em; }
+  #rsvp .radio label input[type=radio] {
+    height: 0.8em;
+    width: 0.8em;
+    margin-left: -1em;
+    margin-top: 0.3em; }
+
+#rsvp .radio label + label {
+  margin-left: 20px; }
+
 #rsvp .error-message {
   background-color: #FFEFEF;
   color: #FFAAAA;

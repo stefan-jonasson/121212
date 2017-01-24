@@ -511,6 +511,30 @@ a {
   p.help-block {
     font-size: 0.9em;
   }
+  #buss-choice {
+    .alert-danger {
+      display: none;
+    }
+    &.has-error {
+      .alert-danger {
+        display: block;
+      }
+    }
+  }
+  .radio {
+    label {
+      padding-left: 1em;
+      input[type=radio] {
+        height: 0.8em;
+        width: 0.8em;
+        margin-left: -1em;
+        margin-top: 0.3em;
+      }
+    }
+    label + label {
+      margin-left: 20px;
+    }
+  }
   .error-message {
     background-color: #FFEFEF;
     color: #FFAAAA;

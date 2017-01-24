@@ -26,19 +26,32 @@ $(function() {
         event.preventDefault();
     });
 });
+var submitValidate = function (form) {
+  $(this).find('.has-error').removeClass('has-error');
+  var requiredInputs = $(form).find('input[type=text][required]').filter(function() {
+      return this.value == "";
+  });
+  var bussTo = $(form).find("input[name=buss-to]:checked").length == 0;
+  var bussHome = $(form).find("input[name=buss-home]:checked").length == 0;
+  var valid = true;
 
+  if (bussTo || bussHome) {
+    $("#buss-choice").addClass('has-error');
+    valid = false;
+  }
+  if (requiredInputs.length > 0) {
+      requiredInputs.each(function () {
+        $(this).closest('.form-group').addClass('has-error');
+      });
+      valid = false;
+  }
+  return valid;
+}
 
 $('#rsvp').on('submit', 'form', function(e) {
     e.preventDefault();
-    $(this).find('.has-error').removeClass('has-error');
-    var requiredInput = $(this).find('input[required]').filter(function() {
-       return this.value == "";
-     });
-    if (requiredInput.length > 0) {
-        requiredInput.each(function () {
-          $(this).closest('.form-group').addClass('has-error');
-        });
-    } else {
+
+    if (submitValidate(this)) {
       $('html, body').stop().animate({
           scrollTop: $(e.currentTarget).closest('section').offset().top
       }, 1000, 'easeInOutExpo');
@@ -47,7 +60,9 @@ $('#rsvp').on('submit', 'form', function(e) {
         "email": $(this).find("[name=email]").val(),
         "phone": $(this).find("[name=phone]").val(),
         "comment": $(this).find("[name=comment]").val(),
-        "attending": $(this).find("#rsvp-status1").is(':checked')
+        "attending": $(this).find("#rsvp-status1").is(':checked'),
+        "bussTo": $(this).find("#buss-to-true").is(':checked'),
+        "bussHome": $(this).find("#buss-home-true").is(':checked')
       };
       $.ajax({
         type: "POST",
@@ -59,10 +74,15 @@ $('#rsvp').on('submit', 'form', function(e) {
         contentType: "application/json",
         dataType: 'json'
       }).fail(function(result, data) {
-          $('#rsvp').addClass('submitted');
-
+          $('#rsvp').addClass('error');
       });
     }
+});
+$('#submit-rsvp').on('click', function(e) {
+  if(!submitValidate('#rsvp')) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
 });
 $('#new-post').on('click', function(e) {
   $('#rsvp').removeClass('submitted');

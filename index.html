@@ -161,31 +161,70 @@
                     <textarea id="comment" class="form-control" name="comment"></textarea>
                     <p class="help-block">T.ex. Allergier eller annat övrigt som kan vara bra för oss att veta.</p>
                   </div>
-                  <div class="form-group">
-                  <div class="radio">
-                      <label>
-                        <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
-                        Jag kommer
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
-                        Jag kan inte komma
-                      </label>
-                    </div>
-                    <div class="radio disabled">
-                      <label>
-                        <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
-                        Jag vill inte komma
-                      </label>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Kommer du på bröllopet?</div>
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="rsvp-status" id="rsvp-status1" value="attending" checked>
+                            Jag kommer
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="rsvp-status" id="rsvp-status2" value="not-attending">
+                            Jag kan inte komma
+                          </label>
+                        </div>
+                        <div class="radio disabled">
+                          <label>
+                            <input type="radio" name="rsvp-status" id="rsvp-status4"  disabled>
+                            Jag vill inte komma
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-default btn-lg">Skicka</button>
+                  <div id="buss-choice" class="panel panel-default">
+                    <div class="panel-heading">Vill du åka med vår fina buss?</div>
+                    <div class="panel-body">
+                      <div class="alert alert-danger" role="alert">Du måste svara på båda alternativen.</div>
+                      <div class="form-group">
+                        Jag vill åka <b>till</b> vigsel (15:15, Växjö Rese Centrum):
+                        <div class="radio">
+                          <label >
+                              <input type="radio" name="buss-to" id="buss-to-true" value="true" required>
+                              Ja
+                          </label>
+                          <label>
+                              <input type="radio" name="buss-to" id="buss-to-false" value="false" required>
+                              Nej
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        Jag vill åka <b>hem</b> från festen (02:15):
+                        <div class="radio">
+                          <label >
+                              <input type="radio" name="buss-home" id="buss-home-true" value="true" required>
+                              Ja
+                          </label>
+                          <label>
+                              <input type="radio" name="buss-home" id="buss-home-false" value="false" required>
+                              Nej
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="submit" id="submit-rsvp" class="btn btn-default btn-lg">Skicka svar</button>
                 </div>
               </div>
             </form>
             <div id="no-post" class="photo-card view-marker right"></div>
+            <div id="buss" class="photo-card view-marker"></div>
           </div>
         </div>
       </section>
@@ -283,7 +322,6 @@
                   </table>
               </div>
             </div>
-            <div id="buss" class="photo-card view-marker right"></div>
           </div>
         </div>
       </section>
