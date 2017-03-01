@@ -105,7 +105,7 @@ $('#rsvp-addition').on('submit', 'form', function(e) {
           success: function (data) {
             $('#rsvp-addition')
             .addClass('submitted')
-            .on('click', function() {
+            .one('click', function() {
               $('#rsvp-addition').removeClass('submitted').addClass('hidden');
             });
           },
