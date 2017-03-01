@@ -13,11 +13,46 @@ function collapseNavbar() {
     }
 }
 
+var API_HOST = '';
+
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
+var loadBussForm = function () {
+  // Show the buss form?
+  if (window.location.hash.search('#uid=') != -1) {
+    var uid = window.location.hash.substring(5);
+    // Save a reference to be used at post time
+    $('#rsvp-addition').find('form').data('uid', uid);
+    $.ajax({
+      type: "GET",
+      url: API_HOST + '/rsvps/' + uid,
+      contentType: "application/json",
+      dataType: 'json'
+    })
+    .success(function(data) {
+      $('#name-info').val(data.name);
+      if (data.bussHome !== null) {
+        if (data.bussHome) {
+          $('#buss-home-true').attr('checked', true);
+        } else {
+          $('#buss-home-false').attr('checked', true);
+        }
+      }
+      if (data.bussTo !== null) {
+        if (data.bussTo) {
+          $('#buss-to-true').attr('checked', true);
+        } else {
+          $('#buss-to-false').attr('checked', true);
+        }
+      }
+      $('#rsvp-addition').removeClass('hidden');
+    });
+  }
+};
+
 $(function() {
+    // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -25,7 +60,12 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+    loadBussForm();
+    $(window).on('hashchange', function() {
+      loadBussForm();
+    });
 });
+
 var submitValidate = function (form) {
   $(this).find('.has-error').removeClass('has-error');
   var requiredInputs = $(form).find('input[type=text][required]').filter(function() {
@@ -47,6 +87,38 @@ var submitValidate = function (form) {
   }
   return valid;
 }
+$('#rsvp-addition').on('submit', 'form', function(e) {
+    e.preventDefault();
+    if ($(this).data('uid')) {
+      if (submitValidate(this)) {
+        $('html, body').stop().animate({
+            scrollTop: $(e.currentTarget).closest('section').offset().top
+        }, 1000, 'easeInOutExpo');
+        var rsvp = {
+          "bussTo": $(this).find("#buss-to-true").is(':checked'),
+          "bussHome": $(this).find("#buss-home-true").is(':checked')
+        };
+        $.ajax({
+          type: "POST",
+          url: API_HOST + '/update/' + $(this).data('uid'),
+          data: JSON.stringify(rsvp),
+          success: function (data) {
+            $('#rsvp-addition')
+            .addClass('submitted')
+            .on('click', function() {
+              $('#rsvp-addition').addClass('hidden');
+            });
+          },
+          contentType: "application/json",
+          dataType: 'json'
+        }).fail(function(result, data) {
+            $('#rsvp-addition').addClass('error');
+        });
+      }
+    } else {
+      alert('Kan inte hitta användaren!');
+    }
+});
 
 $('#rsvp').on('submit', 'form', function(e) {
     e.preventDefault();
@@ -66,7 +138,7 @@ $('#rsvp').on('submit', 'form', function(e) {
       };
       $.ajax({
         type: "POST",
-        url: '/rsvps',
+        url: API_HOST + '/rsvps',
         data: JSON.stringify(rsvp),
         success: function (data) {
           $('#rsvp').addClass('submitted');
@@ -79,18 +151,18 @@ $('#rsvp').on('submit', 'form', function(e) {
     }
 });
 $('#submit-rsvp').on('click', function(e) {
-  if(!submitValidate('#rsvp')) {
+  if(!submitValidate($(this).closest('form'))) {
     e.preventDefault();
     e.stopPropagation();
   }
 });
 $('#new-post').on('click', function(e) {
-  $('#rsvp').removeClass('submitted');
+  $(this).closest('.rsvp-form').removeClass('submitted');
 });
 $('#try-again').on('click', function(e) {
   e.preventDefault();
   e.stopPropagation();
-  $('#rsvp').removeClass('error');
+  $(this).closest('.rsvp-form').removeClass('error');
 });
 
 

@@ -31,6 +31,8 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+
+
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -53,9 +55,9 @@
                     <li>
                         <a class="page-scroll" href="#about">Om oss</a>
                     </li>
-                    <li>
+                    <!--li>
                         <a class="page-scroll" href="#rsvp">RSVP</a>
-                    </li>
+                    </li-->
                     <li>
                         <a class="page-scroll" href="#wedding-day">Bröllopsdagen</a>
                     </li>
@@ -77,6 +79,63 @@
         </div>
         <!-- /.container -->
     </nav>
+    <!-- RSVP Section -->
+    <section id="rsvp-addition" class="rsvp-form hidden">
+          <form>
+            <div class="paper-box">
+              <div class="submit-message">
+                <h2>Tack!</h2>
+                <p>Vi har nu mottagit ditt svar!</p>
+              </div>
+              <div class="error-message">
+                <h2>Ooops!</h2>
+                <p>Aj då, något blev fel, vi har <strong>inte</strong> sparat din anmälan. Skicka ett mail till <a href="mailto:jonasson.stefan@gmail.com">Stefan</a> och säg att han inte kan sin teknik!</p>
+                <button type="button" class="btn btn-default btn-lg" id="try-again">Pröva igen!</button>
+              </div>
+              <div class="submit-form">
+                <h3>Transport</h3>
+                <p>Vi har fixat en buss som går från Växjö Centrum. För att vi skall få till rätt storlek på bussen behöver vi veta om du vill åka med!</p>
+                <div class="form-group">
+                  <label for="name">Namn</label>
+                  <input type="text" class="form-control" id="name-info" disabled="true">
+                </div>
+                <div id="buss-choice" class="panel panel-default">
+                  <div class="panel-heading">Vill du åka med vår fina buss?</div>
+                  <div class="panel-body">
+                    <div class="alert alert-danger" role="alert">Du måste svara på båda alternativen.</div>
+                    <div class="form-group">
+                      Jag vill åka <b>till</b> vigsel (15:15, Växjö Rese Centrum):
+                      <div class="radio">
+                        <label >
+                            <input type="radio" name="buss-to" id="buss-to-true" value="true" required>
+                            Ja
+                        </label>
+                        <label>
+                            <input type="radio" name="buss-to" id="buss-to-false" value="false" required>
+                            Nej
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      Jag vill åka <b>hem</b> från festen (02:15):
+                      <div class="radio">
+                        <label >
+                            <input type="radio" name="buss-home" id="buss-home-true" value="true" required>
+                            Ja
+                        </label>
+                        <label>
+                            <input type="radio" name="buss-home" id="buss-home-false" value="false" required>
+                            Nej
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" id="submit-rsvp" class="btn btn-default btn-lg">Skicka svar</button>
+              </div>
+            </div>
+          </form>
+    </section>
 
     <!-- Intro Header -->
     <header class="intro">
@@ -118,7 +177,7 @@
       </section>
 
       <!-- RSVP Section -->
-      <section id="rsvp" class="container content-section">
+      <!--section id="rsvp" class="rsvp-form container content-section">
         <div class="row">
           <div class="col-md-8 col-md-offset-1">
             <form>
@@ -227,7 +286,7 @@
             <div id="buss" class="photo-card view-marker"></div>
           </div>
         </div>
-      </section>
+      </section-->
 
       <!-- Kyrkan -->
       <section id="wedding-day" class="container content-section">
@@ -303,15 +362,29 @@
                         <th>Aktivitet</th>
                         <th class="hidden-xs">Plats</th>
                       </tr>
-
+                      <tr>
+                        <td>15:15</td>
+                        <td>Buss avgår från Växjö</td>
+                        <td class="hidden-xs">Växjö RC</td>
+                      </tr>
                       <tr>
                         <td>16:00</td>
                         <td>Vigsel</td>
                         <td class="hidden-xs">Tävelsås kyrka</td>
                       </tr>
                       <tr>
-                        <td>---</td>
-                        <td>Fler detaljer kommer senare.</td>
+                        <td>17:00</td>
+                        <td>Bröllopsfest</td>
+                        <td class="hidden-xs">Rinkaby</td>
+                      </tr>
+                      <tr>
+                        <td>18:15</td>
+                        <td>Middag serveras</td>
+                        <td class="hidden-xs">Rinkaby</td>
+                      </tr>
+                      <tr>
+                        <td>01:00</td>
+                        <td>"Nattamat" serveras</td>
                         <td class="hidden-xs">Rinkaby</td>
                       </tr>
                       <tr>

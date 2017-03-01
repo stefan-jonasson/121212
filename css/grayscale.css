@@ -401,61 +401,92 @@ a {
   #this-way-to.in-view {
     transform: rotate(25deg) translate(-440px, 100px); }
 
-#rsvp form {
+#rsvp-addition {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1em;
+  height: auto;
+  font-size: 18px;
+  position: fixed;
+  z-index: 1031;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #rsvp-addition form {
+    max-height: 100%;
+    max-width: 400px;
+    overflow: auto; }
+  #rsvp-addition::before {
+    content: '';
+    display: block;
+    position: fixed;
+    background-color: black;
+    opacity: 0.7;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; }
+  #rsvp-addition.hidden::before, #rsvp-addition.hidden {
+    display: none; }
+
+.rsvp-form form {
   position: relative; }
 
-#rsvp .paper-box > div {
+.rsvp-form .paper-box > div {
   transition: height 1.3s ease-in-out, opacity 1.3s ease-in-out; }
 
-#rsvp .help-block.required {
+.rsvp-form .help-block.required {
   display: none; }
 
-#rsvp .has-error .help-block.required {
+.rsvp-form .has-error .help-block.required {
   display: block; }
 
-#rsvp p.help-block {
+.rsvp-form p.help-block {
   font-size: 0.9em; }
 
-#rsvp #buss-choice .alert-danger {
+.rsvp-form #buss-choice .alert-danger {
   display: none; }
 
-#rsvp #buss-choice.has-error .alert-danger {
+.rsvp-form #buss-choice.has-error .alert-danger {
   display: block; }
 
-#rsvp .radio label {
+.rsvp-form .radio label {
   padding-left: 1em; }
-  #rsvp .radio label input[type=radio] {
+  .rsvp-form .radio label input[type=radio] {
     height: 0.8em;
     width: 0.8em;
     margin-left: -1em;
     margin-top: 0.3em; }
 
-#rsvp .radio label + label {
+.rsvp-form .radio label + label {
   margin-left: 20px; }
 
-#rsvp .error-message {
+.rsvp-form .error-message {
   background-color: #FFEFEF;
   color: #FFAAAA;
   padding: 1em;
   display: none; }
 
-#rsvp .submit-message {
+.rsvp-form .submit-message {
   opacity: 0;
   height: 0px;
   overflow: hidden; }
 
-#rsvp.error .error-message {
+.rsvp-form.error .error-message {
   display: block; }
 
-#rsvp.error .submit-form {
+.rsvp-form.error .submit-form {
   display: none; }
 
-#rsvp.submitted .submit-message {
+.rsvp-form.submitted .submit-message {
   opacity: 100;
   height: auto;
   overflow: visible; }
 
-#rsvp.submitted .submit-form {
+.rsvp-form.submitted .submit-form {
   opacity: 0;
   height: 0px;
   overflow: hidden; }
