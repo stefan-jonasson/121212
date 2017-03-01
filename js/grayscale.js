@@ -106,7 +106,7 @@ $('#rsvp-addition').on('submit', 'form', function(e) {
             $('#rsvp-addition')
             .addClass('submitted')
             .on('click', function() {
-              $('#rsvp-addition').addClass('hidden');
+              $('#rsvp-addition').removeClass('submitted').addClass('hidden');
             });
           },
           contentType: "application/json",
